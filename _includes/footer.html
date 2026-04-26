@@ -30,7 +30,7 @@
     <div class="site-footer__col">
       <h3>Контакты</h3>
       <ul>
-        {% if site.social.bot %}<li><a href="{{ site.social.bot }}" rel="noopener">Канал поддержки</a></li>{% endif %}
+        {% if site.social.email %}<li><a href="mailto:{{ site.social.email }}">{{ site.social.email }}</a></li>{% endif %}
       </ul>
     </div>
   </div>

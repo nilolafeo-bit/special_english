@@ -8,7 +8,7 @@ description: >-
   IT-разработчиков, врачей, юристов, логистов, руководителей и родителей.
   Конкретные сценарии, скрипты и фразы вместо общей теории.
 author: "Special English"
-email: "hello@special-english.ru"
+email: "aiinformatorbot@gmail.com"
 url: "https://special-english.ru"
 baseurl: ""
 lang: ru
@@ -18,8 +18,7 @@ timezone: Europe/Moscow
 # SOCIAL & VERIFICATIONS — заполни после регистрации
 # ============================================================================
 social:
-  bot: "https://aiinformatorbot.com"
-  email: ""
+  email: "aiinformatorbot@gmail.com"
 
 # Верификация поисковиков (вставить после регистрации в Яндекс.Вебмастере и
 # Google Search Console)
