@@ -1,6 +1,6 @@
 ---
 slug: gaming-english
-title: "Gaming English 2026: язык лобби, стрима и Discord"
+title: "Gaming English 2026"
 subtitle: "Как играть, стримить и общаться с международной аудиторией"
 short_description: "Полный гайд для игроков и стримеров: callouts по жанрам, формула WHO + WHAT + WHERE, toxic chat survival, streaming English, Discord-этикет и slang 2026."
 description: "Платный PDF-гайд для геймеров и стримеров. 67 страниц, 800+ готовых фраз, 4 жанра (FPS/MOBA/MMO/BR), три платформы (Twitch/YouTube/Discord). Уровень A2–B1."

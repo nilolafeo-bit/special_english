@@ -94,7 +94,7 @@
   short_description: >-
     Для врачей и медсестёр, нацеленных на работу в UK, Австралии и Канаде.
     10 глав, разбор всех 4 модулей OET, протоколы Calgary–Cambridge и
-    SPIKES, 90-дневный план подготовки.
+    SPIKES, 90-дневный план.
   category: medical
   category_title: "Английский для медиков"
   price: "4 990 ₽"
@@ -255,11 +255,11 @@
 
 - slug: logistics-english
   title: "Logistics English 2026"
-  subtitle: "Гайд для логистов, экспедиторов и специалистов ВЭД"
+  subtitle: "Практический гайд для логистов и специалистов ВЭД"
   short_description: >-
-    Карта мира 2026 (Belt & Road, Middle Corridor, IMEC, INSTC),
-    11 правил Incoterms 2020, 20 email-шаблонов, 10 диалогов с аудио,
-    Excel-словарь 400+ терминов.
+    От новых торговых коридоров (IMEC, Middle Corridor, INSTC) до
+    живых переговоров. Все 11 Incoterms 2020, 400+ терминов,
+    20 email-шаблонов, 10 диалогов с audio MP3.
   category: logistics
   category_title: "Английский для логистики и ВЭД"
   price: "3 490 ₽"
@@ -294,19 +294,19 @@
     - "Глоссарий 400+ терминов EN–RU в .xlsx"
 
 - slug: leadership-english
-  title: "The Language of Power"
-  subtitle: "English for Leaders — board, инвесторы и кросс-культурные переговоры"
+  title: "The Language of Power — English for Leaders"
+  subtitle: "Практическое руководство для руководителей, ведущих переговоры на английском"
   short_description: >-
-    Практическое руководство для русскоязычных руководителей: 90-секундный
-    питч с risk & ask, earnings calls, executive writing, cross-cultural
-    disagreement, Master Phrasebank на 500+ конструкций.
+    Для CEO, CFO, COO, founders и board members уровня B2–C1, выходящих
+    на международный уровень. 78 страниц + 11 приложений, Master
+    Phrasebank на 500+ конструкций, 30-дневный план.
   category: leadership
   category_title: "Английский для руководителей"
   price: "5 490 ₽"
   price_old: "7 490 ₽"
   pages: 78
   level: "B2 → C1"
-  format: "PDF · 11 приложений · 30-дневный план"
+  format: "PDF · 11 приложений · Master Phrasebank 500+ конструкций"
   payment_url: "https://payment.example/leadership-english"
   cover: "/assets/images/covers/leadership-english.svg"
   pain_points:
@@ -338,9 +338,9 @@
   title: "Gaming English 2026"
   subtitle: "Как играть, стримить и общаться с международной аудиторией"
   short_description: >-
-    Для игроков и контент-мейкеров 16–28 лет: войти в международный
-    matchmaking, найти зарубежную тиму, запустить англоязычный стрим.
-    800+ фраз, 4 жанра, актуальный slang 2026.
+    Полный гайд для игроков и стримеров: callouts по жанрам, формула
+    WHO + WHAT + WHERE, toxic chat survival, streaming English,
+    Discord-этикет и slang 2026.
   category: gaming
   category_title: "Английский для геймеров и стримеров"
   price: "1 990 ₽"
