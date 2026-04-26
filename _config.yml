@@ -33,6 +33,14 @@ google_site_verification: ""
 yandex_metrika_id: ""
 google_analytics_id: ""
 
+# ============================================================================
+# ЮKassa + n8n — приём платежей и автодоставка PDF
+# ============================================================================
+# create_payment_url — публичный URL вебхука n8n, который создаёт платёж
+# в ЮKassa и возвращает confirmation_url. Подробнее: см. /n8n/README.md.
+yukassa:
+  create_payment_url: ""
+
 # OpenGraph / Twitter — изображение по умолчанию (1200×630)
 og_image: "/assets/images/og-default.svg"
 twitter:
