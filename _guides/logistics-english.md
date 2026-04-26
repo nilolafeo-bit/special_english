@@ -5,7 +5,7 @@ subtitle: "Практический гайд для логистов и спец
 short_description: "От новых торговых коридоров (IMEC, Middle Corridor, INSTC) до живых переговоров. Все 11 Incoterms 2020, 400+ терминов, 20 email-шаблонов, 10 диалогов с audio MP3."
 description: "PDF-гайд Logistics English 2026 для логистов и ВЭД: карта 2026, Incoterms, communication toolkit, practice lab. 59 страниц + Excel-словарь 400+ + аудио."
 category: logistics
-category_title: "Английский для логистики"
+category_title: "Английский для логистики и ВЭД"
 price: "3 490 ₽"
 price_old: "4 990 ₽"
 pages: 59
