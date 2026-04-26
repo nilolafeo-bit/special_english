@@ -1,3 +1,7 @@
+{%- assign social_urls = "" | split: "" -%}
+{%- if site.social.telegram -%}{%- capture u -%}https://t.me/{{ site.social.telegram }}{%- endcapture -%}{%- assign social_urls = social_urls | push: u -%}{%- endif -%}
+{%- if site.social.vk -%}{%- capture u -%}https://vk.com/{{ site.social.vk }}{%- endcapture -%}{%- assign social_urls = social_urls | push: u -%}{%- endif -%}
+{%- if site.social.youtube -%}{%- capture u -%}https://youtube.com/@{{ site.social.youtube }}{%- endcapture -%}{%- assign social_urls = social_urls | push: u -%}{%- endif -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -5,11 +9,7 @@
   "name": {{ site.author | jsonify }},
   "url": "{{ site.url }}{{ site.baseurl }}/",
   "logo": "{{ site.url }}{{ site.baseurl }}/assets/images/logo.png",
-  "email": {{ site.email | jsonify }},
-  "sameAs": [
-    {% if site.social.telegram != "" %}"https://t.me/{{ site.social.telegram }}"{% if site.social.vk != "" or site.social.youtube != "" %},{% endif %}{% endif %}
-    {% if site.social.vk != "" %}"https://vk.com/{{ site.social.vk }}"{% if site.social.youtube != "" %},{% endif %}{% endif %}
-    {% if site.social.youtube != "" %}"https://youtube.com/@{{ site.social.youtube }}"{% endif %}
-  ]
+  "email": {{ site.email | jsonify }}{% if social_urls.size > 0 %},
+  "sameAs": {{ social_urls | jsonify }}{% endif %}
 }
 </script>

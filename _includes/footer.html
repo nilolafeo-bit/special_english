@@ -17,7 +17,7 @@
     <div class="site-footer__col">
       <h3>Сайт</h3>
       <ul>
-        <li><a href="{{ '/about/' | relative_url }}">Об авторе</a></li>
+        <li><a href="{{ '/about/' | relative_url }}">О проекте</a></li>
         <li><a href="{{ '/blog/' | relative_url }}">Блог</a></li>
         <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
         <li><a href="{{ '/contacts/' | relative_url }}">Контакты</a></li>
@@ -30,10 +30,7 @@
     <div class="site-footer__col">
       <h3>Контакты</h3>
       <ul>
-        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        {% if site.social.telegram != "" %}<li><a href="https://t.me/{{ site.social.telegram }}" rel="noopener">Telegram</a></li>{% endif %}
-        {% if site.social.vk != "" %}<li><a href="https://vk.com/{{ site.social.vk }}" rel="noopener">ВКонтакте</a></li>{% endif %}
-        {% if site.social.youtube != "" %}<li><a href="https://youtube.com/@{{ site.social.youtube }}" rel="noopener">YouTube</a></li>{% endif %}
+        {% if site.social.email %}<li><a href="mailto:{{ site.social.email }}">{{ site.social.email }}</a></li>{% endif %}
       </ul>
     </div>
   </div>
