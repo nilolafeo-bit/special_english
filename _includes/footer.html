@@ -8,7 +8,7 @@
     <div class="site-footer__col">
       <h3>Гайды</h3>
       <ul>
-        {% for g in site.data.guides limit: 8 %}
+        {% for g in site.data.guides %}
           <li><a href="{{ '/guides/' | append: g.slug | append: '/' | relative_url }}">{{ g.title }}</a></li>
         {% endfor %}
       </ul>
