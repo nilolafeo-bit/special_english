@@ -9,8 +9,8 @@ description: >-
   Конкретные сценарии, скрипты и фразы вместо общей теории.
 author: "Special English"
 email: "hello@your-domain.ru"
-url: "https://your-domain.ru"          # ← поменять после подключения домена
-baseurl: ""                            # пусто, если сайт в корне домена
+url: "https://nilolafeo-bit.github.io"     # ← поменять после подключения своего домена (например, https://your-domain.ru)
+baseurl: "/special_english"                # ← когда подключишь свой домен, поставь пустую строку: ""
 lang: ru
 timezone: Europe/Moscow
 
