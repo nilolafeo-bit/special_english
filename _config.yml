@@ -8,9 +8,9 @@ description: >-
   IT-разработчиков, врачей, юристов, логистов, руководителей и родителей.
   Конкретные сценарии, скрипты и фразы вместо общей теории.
 author: "Special English"
-email: "hello@your-domain.ru"
-url: "https://nilolafeo-bit.github.io"     # ← поменять после подключения своего домена (например, https://your-domain.ru)
-baseurl: "/special_english"                # ← когда подключишь свой домен, поставь пустую строку: ""
+email: "hello@special-english.ru"
+url: "https://special-english.ru"
+baseurl: ""
 lang: ru
 timezone: Europe/Moscow
 
@@ -18,11 +18,8 @@ timezone: Europe/Moscow
 # SOCIAL & VERIFICATIONS — заполни после регистрации
 # ============================================================================
 social:
-  telegram: ""
-  instagram: ""
-  vk: ""
-  youtube: ""
-  email: "hello@your-domain.ru"
+  bot: "https://aiinformatorbot.com"
+  email: ""
 
 # Верификация поисковиков (вставить после регистрации в Яндекс.Вебмастере и
 # Google Search Console)
