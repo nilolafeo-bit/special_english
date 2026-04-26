@@ -1,16 +1,16 @@
 ---
 slug: it-interview-english
-title: "English для IT-интервью: как пройти технические интервью в FAANG"
-subtitle: "Как пройти технические интервью в международных компаниях"
-short_description: "Гайд для разработчиков уровня Middle/Senior, которые валят интервью в FAANG и EU-стартапах не из-за алгоритмов, а из-за английского. System design, behavioral, salary negotiation."
-description: "PDF-гайд для IT-разработчиков: как пройти технические интервью в FAANG и EU-стартапах. System design, behavioral, salary negotiation. 88 страниц + 50 готовых ответов."
+title: "English for Tech Interviews"
+subtitle: "Полный гайд по интервью в международных IT-компаниях"
+short_description: "Для Middle и Senior разработчиков из СНГ, идущих в Google, Meta, Stripe, Booking, Revolut, Spotify. Coding narration, system design, behavioral, salary negotiation, follow-ups."
+description: "PDF-гайд для Middle/Senior разработчиков: подготовка к интервью в Google, Meta, Stripe, Booking, Revolut, Spotify. 81 страница, 50 reference-ответов по STAR."
 category: it
 category_title: "Английский для IT"
 price: "2 990 ₽"
 price_old: "4 490 ₽"
-pages: 88
-level: "B1 → B2"
-format: "PDF + 50 готовых ответов + чек-листы"
+pages: 81
+level: "B1 → C1"
+format: "PDF · 50 reference-ответов по STAR · чек-листы"
 payment_url: "https://payment.example/it-interview-english"
 cover: "/assets/images/covers/it-interview-english.svg"
 breadcrumbs:
@@ -25,21 +25,22 @@ pain_points:
   - "Не различаете small talk и culture fit fail"
 audience_yes:
   - "Middle / Senior разработчики, QA, DevOps, дата-инженеры"
-  - "Уровень английского B1–B2"
-  - "Готовятся к релокейту или ремоут-позициям в FAANG, unicorns, EU-стартапах"
+  - "Уровень английского B1–C1"
+  - "Готовятся в Google, Meta, Stripe, Booking, Revolut, Spotify и др."
 audience_no:
   - "Junior без опыта прохождения интервью"
   - "Те, кому нужен курс программирования, а не английского"
 toc:
-  - "Phonetics survival kit: 30 слов, которые айтишники произносят неправильно"
-  - "Vocabulary by domain: 300 терминов из живой речи"
-  - "Coding interview: как «думать вслух» по-английски"
-  - "System design: 40 фраз для trade-offs + 3 полных кейса"
-  - "Behavioral по STAR: 50 топ-вопросов с reference-ответами"
+  - "Почему английский — главная причина отказов на финале"
+  - "Phonetics survival kit: 30 слов, которые произносим неправильно"
+  - "Vocabulary by domain: 300 терминов живой речи"
+  - "Coding interview narration: как «думать вслух» по-английски"
+  - "System design interview: структура, фразы, 3 полных кейса"
+  - "Behavioral interview: STAR, 50 вопросов, reference-ответы"
   - "Small talk и culture fit: первые 5 минут звонка"
-  - "Salary negotiation: скрипты для торга"
+  - "Salary negotiation: скрипты, сценарии, антипаттерны"
   - "Follow-up emails: 10 готовых шаблонов"
-  - "Чек-лист подготовки за 30 / 14 / 7 / 1 день"
+  - "Чек-лист подготовки: 30 / 14 / 7 / 1 день до интервью"
 faq:
   - question: "Подойдёт ли гайд для подготовки к российским/локальным интервью на английском?"
     answer: "Да. Большинство «российских» компаний с международной командой ведут интервью по тем же фреймворкам — STAR, system design, behavioral. Разница только в более мягком культурном фоне. Гайд работает в обоих случаях."
@@ -58,7 +59,7 @@ aggregate_rating:
 
 ## Что вы получаете
 
-PDF-гайд на 88 страниц, 50 готовых reference-ответов на топ behavioral-вопросы,
+PDF-гайд на 81 страницу, 50 готовых reference-ответов на топ behavioral-вопросы,
 3 полных кейса system design (URL shortener, Twitter feed, ride-sharing) с
 разбором, чек-листы подготовки на 30 / 14 / 7 / 1 день и 10 e-mail-шаблонов
 follow-up.

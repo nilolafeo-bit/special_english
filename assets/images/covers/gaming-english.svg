@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 560" role="img" aria-label="Gaming English 2026">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1F1147"/>
+      <stop offset="100%" stop-color="#7A1FA0"/>
+    </linearGradient>
+    <pattern id="p" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.08)"/>
+    </pattern>
+  </defs>
+  <rect width="420" height="560" fill="url(#g)"/>
+  <rect width="420" height="560" fill="url(#p)"/>
+  <rect x="24" y="24" width="372" height="512" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <text x="48" y="80" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="500" fill="rgba(255,255,255,0.65)" letter-spacing="3">SPECIAL ENGLISH</text>
+  <text x="48" y="280" font-family="Lora, Georgia, serif" font-size="44" font-weight="600" fill="#fff">Gaming</text>
+  <text x="48" y="332" font-family="Lora, Georgia, serif" font-size="44" font-weight="600" fill="#fff">English</text>
+  <text x="48" y="376" font-family="Lora, Georgia, serif" font-size="32" font-style="italic" font-weight="500" fill="#F2C94C">2026</text>
+
+  <line x1="48" y1="500" x2="100" y2="500" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <text x="48" y="530" font-family="Inter, system-ui, sans-serif" font-size="13" fill="rgba(255,255,255,0.55)">PDF · 2026</text>
+</svg>

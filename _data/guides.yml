@@ -6,20 +6,22 @@
 # ============================================================================
 
 - slug: relocation-english
-  title: "Relocation English"
+  title: "English для релокантов"
   subtitle: "Что говорить в первые 90 дней за границей"
   short_description: >-
-    Скрипты и шаблоны для банка, аренды, ВНЖ, врача, школы и госуслуг.
-    Для тех, кто переехал и теряется в первых месяцах за границей.
+    Скрипты, диалоги и e-mail-шаблоны для банка, аренды, врача, школы
+    и миграционной службы. Для семей и одиночек, переезжающих в Европу,
+    UK, Кипр и ОАЭ.
   category: relocation
   category_title: "Английский для релокации"
   price: "2 990 ₽"
   price_old: "4 490 ₽"
-  pages: 96
+  pages: 126
   level: "A2 → B1"
-  format: "PDF + аудио-референсы"
+  format: "PDF · 300+ фраз · 40+ email-шаблонов"
   payment_url: "https://payment.example/relocation-english"
   cover: "/assets/images/covers/relocation-english.svg"
+  countries: "UK · Portugal · Cyprus · UAE · Spain · Netherlands · Germany · Georgia"
   pain_points:
     - "Открыли счёт в Revolut, но застряли на вопросе о source of funds"
     - "Лендлорд прислал договор аренды на 12 страниц, а вы поняли половину"
@@ -27,38 +29,38 @@
     - "Врач не понимает, что у вас болит, и выписывает не то"
     - "Полицейский остановил на улице, и вы не знаете, что отвечать"
   audience_yes:
-    - "Релоканты последних 1–3 лет (Грузия, Сербия, Кипр, Португалия, ОАЭ, EU)"
+    - "Релоканты последних 1–3 лет (UK, Portugal, Cyprus, UAE, Spain, NL, DE, GE)"
     - "Уровень английского A2–B1: можете заказать кофе, но теряетесь в банке"
     - "IT-семьи с детьми, которые столкнулись с школой и врачами"
   audience_no:
     - "Те, у кого английский C1+ — гайд будет слишком простым"
     - "Те, кто планирует поездку, а не переезд — нужны другие материалы"
   toc:
-    - "Первые 7 дней: критический минимум фраз"
-    - "Банк: открытие счёта, source of funds, blocked payments"
-    - "Аренда жилья: viewing, переговоры, разбор lease agreement"
-    - "ВНЖ и резидентство: общение с миграционными офисами"
-    - "Здоровье: GP, симптомы, страховка, ER vs urgent care"
-    - "Школа и детсад: enrollment, родительские собрания"
-    - "Госуслуги: налоговая, регистрация по адресу, почта"
-    - "Работа и фриланс: контракты, инвойсы, статус self-employed"
-    - "Быт и культура: small talk, жалобы, отказы"
-    - "Emergencies: полиция, скорая, потеря документов"
+    - "Первые 7 дней: аэропорт, SIM, такси, отель, кафе, обмен валют"
+    - "Банк: открытие счёта, KYC, source of funds, блокировки — 50+ скриптов"
+    - "Аренда жилья: viewing, lease, депозит, break clause, проблемы с landlord"
+    - "Резидентство, ВНЖ, виза: migration office, апелляции, продление"
+    - "Здоровье: запись к GP, симптомы, страховка, ER"
+    - "Школа и детский сад: enrollment, родительские собрания, переписка с teacher"
+    - "Госуслуги: налоги, NIE/BSN/AMKA, регистрация по адресу"
+    - "Работа и фриланс: контракты, инвойсы, self-employed"
+    - "Быт и культура: small talk, как извиниться, отказать, пожаловаться"
+    - "Emergencies: полиция, скорая, кража, авария — скрипты для стресс-ситуаций"
 
 - slug: english-for-parents
-  title: "English для родителей"
-  subtitle: "Как помочь ребёнку 3–10 лет выучить английский без репетитора"
+  title: "Английский с ребёнком без репетитора"
+  subtitle: "Пошаговый гайд для родителей детей 3–10 лет"
   short_description: >-
-    Игры, мультики, ежедневные рутины и чек-листы для родителей,
-    у которых нет времени и денег на репетитора, но есть желание дать
-    ребёнку язык в раннем возрасте.
+    Как развивать английский у ребёнка дома без специального образования
+    и дорогих репетиторов. 30-дневный план, 30 TPR-игр, 100+ ежедневных
+    фраз с IPA-транскрипцией.
   category: parents
   category_title: "Английский для родителей"
   price: "1 990 ₽"
   price_old: "2 990 ₽"
-  pages: 72
+  pages: 69
   level: "Для родителей с уровнем A2+"
-  format: "PDF + плейлисты + аудио"
+  format: "PDF + бонусные главы"
   payment_url: "https://payment.example/english-for-parents"
   cover: "/assets/images/covers/english-for-parents.svg"
   pain_points:
@@ -69,78 +71,79 @@
     - "Не понимаете, как встроить английский в повседневную жизнь"
   audience_yes:
     - "Родители детей 3–10 лет, которые хотят билингвизм без репетитора"
-    - "Уровень английского самих родителей — от A2 до B2"
+    - "Уровень английского самих родителей — A2+"
     - "Те, кто готов уделять английскому 20 минут в день"
   audience_no:
     - "Родители подростков 12+ — им нужны другие методики"
     - "Те, кто ищет academic-курс с тестами и оценками"
   toc:
-    - "Билингвизм vs обучение второму языку: мифы и факты"
+    - "7 мифов о билингвизме — и что показывают современные исследования"
     - "Возрастная специфика: 3–4, 5–6, 7–8, 9–10 лет"
-    - "Метод OPOL и его альтернативы для не-нейтив родителей"
-    - "Daily routines: 100+ фраз для утра, еды, прогулки, сна"
-    - "Игровая методика TPR: 30 готовых игр"
-    - "Мультики, песни, YouTube-каналы по возрастам"
-    - "Книги по уровням: Oxford Reading Tree, Usborne"
-    - "План «20 минут английского в день» на месяц"
-    - "Как НЕ убить интерес: типичные ошибки родителей"
-    - "Когда подключать репетитора и как выбирать"
+    - "Метод OPOL и альтернативы для не-носителей"
+    - "100+ фраз для ежедневных ситуаций — с IPA-транскрипцией"
+    - "TPR: 30 готовых игр для активного обучения"
+    - "Рейтинг песен, мультфильмов и YouTube-каналов по возрастам"
+    - "Как читать ребёнку книги, если сама(ам) читаешь неуверенно"
+    - "30-дневный план «20 минут английского в день»"
+    - "12 ошибок родителей, убивающих интерес к языку"
+    - "Когда подключать репетитора — red flags"
 
 - slug: medical-english
-  title: "Medical English"
-  subtitle: "Подготовка к OET для врачей и медсестёр"
+  title: "Medical English — Подготовка к OET"
+  subtitle: "Полный курс с разбором реальных заданий"
   short_description: >-
-    Полный курс подготовки к OET для медиков, которые хотят работать в UK,
-    Ireland, Australia, ОАЭ. Скрипты консультаций, медицинская терминология,
-    разбор всех частей экзамена.
+    Для врачей и медсестёр, нацеленных на работу в UK, Австралии и Канаде.
+    10 глав, разбор всех 4 модулей OET, протоколы Calgary–Cambridge и
+    SPIKES, 90-дневный план.
   category: medical
   category_title: "Английский для медиков"
   price: "4 990 ₽"
   price_old: "6 990 ₽"
-  pages: 116
+  pages: 118
   level: "B1 → B2 (OET 350+)"
-  format: "PDF + 3 mock-теста + аудио"
+  format: "PDF · глоссарий · 90-дневный планер"
   payment_url: "https://payment.example/medical-english"
   cover: "/assets/images/covers/medical-english.svg"
+  regulators: "GMC · NMC · AHPRA"
   pain_points:
-    - "Знаете медицинскую теорию на родном, но не можете провести консультацию по-английски"
-    - "Не понимаете, как сказать пациенту «у вас рак», чтобы это было профессионально"
+    - "Знаете медицинскую теорию на родном, но теряете голос на консультации"
+    - "Не понимаете, как сообщить пациенту плохую новость профессионально"
     - "Заваливаетесь на OET Speaking из-за неестественной интонации"
     - "Не различаете medical jargon и layman terms — пациенты не понимают"
-    - "Боитесь регуляторных барьеров GMC / NMC после переезда"
+    - "Боитесь регуляторных барьеров GMC / NMC / AHPRA после переезда"
   audience_yes:
     - "Врачи и медсёстры с подтверждённым медицинским образованием"
     - "Уровень английского B1–B2"
-    - "Цель: сдать OET на B (350+) для работы в UK / Ireland / Australia / UAE"
+    - "Цель: сдать OET на B (350+) для работы в UK, Australia, Canada, ОАЭ"
   audience_no:
     - "Студенты медицинских вузов без клинической практики"
     - "Те, кому нужен IELTS, а не OET"
   toc:
-    - "Формат OET и отличия от IELTS / TOEFL"
-    - "Calgary-Cambridge: фазы консультации на английском"
-    - "History taking: 80 фраз по системам органов"
-    - "Empathy & breaking bad news: SPIKES-протокол"
-    - "Medical terminology: 500 терминов с layman equivalents"
-    - "OET Reading: стратегии Part A/B/C, разбор 3 тестов"
-    - "OET Listening: типы заданий и тренировка"
-    - "OET Writing: referral, discharge, transfer letters"
-    - "OET Speaking: 20 разобранных role-play кейсов"
-    - "Регуляторные шаги: GMC, NMC, AHPRA"
+    - "Введение в OET: формат, регуляторы, план на 12 недель"
+    - "Doctor–patient framework: модель Calgary–Cambridge"
+    - "History taking: 80 фраз по 6 клиническим системам"
+    - "Empathy & breaking bad news: протокол SPIKES"
+    - "Medical terminology: 500 терминов с IPA и layman-объяснением"
+    - "OET Reading: Parts A/B/C, три разобранных теста"
+    - "OET Listening: стратегии, учебный план на базе BMJ и NEJM"
+    - "OET Writing: 15 разобранных писем уровня Grade B+"
+    - "OET Speaking: 20 role-play кейсов по специальностям"
+    - "Regulatory pathways: GMC / NMC / AHPRA после OET"
 
 - slug: it-interview-english
-  title: "English для IT-интервью"
-  subtitle: "Как пройти технические интервью в международных компаниях"
+  title: "English for Tech Interviews"
+  subtitle: "Полный гайд по интервью в международных IT-компаниях"
   short_description: >-
-    Гайд для разработчиков уровня Middle/Senior, которые валят интервью
-    в FAANG и EU-стартапах не из-за алгоритмов, а из-за английского.
-    System design, behavioral, salary negotiation.
+    Для Middle и Senior разработчиков из СНГ, идущих в Google, Meta,
+    Stripe, Booking, Revolut, Spotify. Coding narration, system design,
+    behavioral, salary negotiation, follow-ups.
   category: it
   category_title: "Английский для IT"
   price: "2 990 ₽"
   price_old: "4 490 ₽"
-  pages: 88
-  level: "B1 → B2"
-  format: "PDF + 50 готовых ответов + чек-листы"
+  pages: 81
+  level: "B1 → C1"
+  format: "PDF · 50 reference-ответов по STAR · чек-листы"
   payment_url: "https://payment.example/it-interview-english"
   cover: "/assets/images/covers/it-interview-english.svg"
   pain_points:
@@ -151,36 +154,37 @@
     - "Не различаете small talk и culture fit fail"
   audience_yes:
     - "Middle / Senior разработчики, QA, DevOps, дата-инженеры"
-    - "Уровень английского B1–B2"
-    - "Готовятся к релокейту или ремоут-позициям в FAANG, unicorns, EU-стартапах"
+    - "Уровень английского B1–C1"
+    - "Готовятся в Google, Meta, Stripe, Booking, Revolut, Spotify и др."
   audience_no:
     - "Junior без опыта прохождения интервью"
     - "Те, кому нужен курс программирования, а не английского"
   toc:
-    - "Phonetics survival kit: 30 слов, которые айтишники произносят неправильно"
-    - "Vocabulary by domain: 300 терминов из живой речи"
-    - "Coding interview: как «думать вслух» по-английски"
-    - "System design: 40 фраз для trade-offs + 3 полных кейса"
-    - "Behavioral по STAR: 50 топ-вопросов с reference-ответами"
+    - "Почему английский — главная причина отказов на финале"
+    - "Phonetics survival kit: 30 слов, которые произносим неправильно"
+    - "Vocabulary by domain: 300 терминов живой речи"
+    - "Coding interview narration: как «думать вслух» по-английски"
+    - "System design interview: структура, фразы, 3 полных кейса"
+    - "Behavioral interview: STAR, 50 вопросов, reference-ответы"
     - "Small talk и culture fit: первые 5 минут звонка"
-    - "Salary negotiation: скрипты для торга"
+    - "Salary negotiation: скрипты, сценарии, антипаттерны"
     - "Follow-up emails: 10 готовых шаблонов"
-    - "Чек-лист подготовки за 30 / 14 / 7 / 1 день"
+    - "Чек-лист подготовки: 30 / 14 / 7 / 1 день до интервью"
 
 - slug: ai-first-english
   title: "AI-First English for Tech Stars"
-  subtitle: "Персональный преподаватель в кармане"
+  subtitle: "Персональный преподаватель в кармане — от B1+ до C1 за 60–90 дней"
   short_description: >-
-    Практическая система: довести рабочий английский до B2+/C1 за 60–90 дней
-    с помощью Claude и других AI-инструментов. 100+ промптов под рабочие
-    сценарии, фреймворки Daily Loop и CEFR-диагностика каждые 2 недели.
+    Практическая система: довести рабочий английский до C1 за 60–90 дней
+    с помощью Claude и других AI-инструментов. 100+ промптов, 6 готовых
+    AI-персон, Daily Loop по 20–30 минут.
   category: it
   category_title: "Английский для IT"
   price: "2 490 ₽"
   price_old: "3 490 ₽"
-  pages: 84
-  level: "B1 → B2+/C1"
-  format: "PDF + библиотека промптов + чек-листы"
+  pages: 87
+  level: "B1+ → C1"
+  format: "PDF · 100+ промптов · 90-дневный план"
   payment_url: "https://payment.example/ai-first-english"
   cover: "/assets/images/covers/ai-first-english.svg"
   pain_points:
@@ -197,32 +201,33 @@
     - "Уровень ниже A2 — гайд предполагает понимание базовой грамматики"
     - "Те, кто ищет академический учебник вместо практической системы"
   toc:
-    - "Daily Loop: 20–30 минут в день вместо марафонов"
-    - "Три фреймворка работы с AI как с преподавателем"
-    - "100+ готовых промптов: стендапы, code review, behavioral"
-    - "System design tutoring через AI: разбор кейсов"
-    - "Salary negotiation: репетиция переговоров с AI"
-    - "CEFR-диагностика каждые 2 недели"
-    - "Voice mode: говорение и произношение"
-    - "Что НЕ просить у AI: типичные ловушки"
-    - "Чек-лист дневной практики на 90 дней"
+    - "Методология AI-First: фреймворки R.A.C. / CTF / Persona"
+    - "Диагностика уровня по CEFR: где ты сейчас и куда идёшь"
+    - "Slack, PR, code review, standup, 1:1, retro — рабочая коммуникация"
+    - "Tech-интервью от phone screen до оффера + salary negotiation"
+    - "Произношение, shadowing, 300+ IT-идиом и phrasal verbs"
+    - "CV, LinkedIn, cold outreach"
+    - "Приложение A: 100+ промптов для Claude по 14 сценариям"
+    - "Приложение B: 90-дневный план по дням"
+    - "Приложение C: подкасты, каналы, Notion-шаблоны"
 
 - slug: legal-english
   title: "Legal English: Contracts & Compliance 2026"
-  subtitle: "Справочник для юристов международной практики"
+  subtitle: "Рабочий справочник для юристов международной практики"
   short_description: >-
-    Рабочий справочник для юристов, работающих с международными контрактами,
-    санкционным комплаенсом и новой регуляторикой ЕС/США. Издание первое —
-    апрель 2026.
+    Для юристов, работающих с международными контрактами, санкционным
+    комплаенсом и новой регуляторикой ЕС/США. Издание апрель 2026 года —
+    с AI Act, DORA, CSDDD и 19-м пакетом санкций ЕС.
   category: legal
   category_title: "Английский для юристов"
   price: "5 990 ₽"
   price_old: "7 990 ₽"
-  pages: 132
+  pages: 142
   level: "B2+"
-  format: "PDF + справочник терминов + шаблоны"
+  format: "PDF · Pocket Glossary 1500+ · Clause Bank 60+"
   payment_url: "https://payment.example/legal-english"
   cover: "/assets/images/covers/legal-english.svg"
+  regulators: "AI Act · DORA · CSDDD · 19-й пакет санкций ЕС · OFAC · OFSI · GDPR · FCPA · UKBA · LMA 2025"
   pain_points:
     - "Тратите часы на разбор contract clauses, которые знакомы по-русски"
     - "Не уверены в формулировках при работе с санкционным комплаенсом"
@@ -230,77 +235,78 @@
     - "Боитесь упустить нюанс в переписке с зарубежным контрагентом"
     - "Сложно объяснить клиенту риски на профессиональном английском"
   audience_yes:
-    - "Юристы корпоративной и арбитражной практики"
-    - "Compliance-офицеры и in-house lawyers"
-    - "Те, кто работает с международными контрактами и сделками M&A"
+    - "Практикующие юристы и in-house counsel"
+    - "Compliance-офицеры и junior lawyers"
+    - "Готовящиеся к TOLES / ILEC / LL.M."
   audience_no:
     - "Студенты-юристы без практики"
     - "Юристы, работающие только с локальным правом"
   toc:
-    - "Анатомия контракта: структура и стандартные clauses"
-    - "Sanctions compliance: ЕС, США, UK — терминология и риски"
-    - "GDPR, AI Act, DSA: новая регуляторика ЕС 2024–2026"
-    - "Boilerplate clauses: governing law, jurisdiction, force majeure"
-    - "M&A: due diligence, SPA, representations & warranties"
-    - "Litigation & arbitration vocabulary"
-    - "Email templates: client communication, opposing counsel"
-    - "Translation pitfalls: false friends в legal English"
-    - "Glossary: 600 терминов с определениями"
+    - "Plain Legal English, grammar traps для юристов, Civil law vs Common law"
+    - "Архитектура контракта: ключевые клаузулы (Reps & Warranties, MAC, LoL, IP, Non-compete)"
+    - "Boilerplate, governing law, SPA / SHA / LOI / LMA / SaaS"
+    - "Sanctions English, Anti-Bribery & AML"
+    - "AI Act + GDPR, DORA, CSRD + CSDDD"
+    - "Negotiation English и Legal Writing"
+    - "Due Diligence и подготовка к экзаменам TOLES / ILEC"
+    - "Pocket Glossary — 1500+ терминов RU ↔ EN"
+    - "Clause Bank — 60+ готовых клаузул"
+    - "12 чек-листов · 20 шаблонов email & memo"
 
 - slug: logistics-english
   title: "Logistics English 2026"
-  subtitle: "The New Silk Road & Global Hubs"
+  subtitle: "Практический гайд для логистов и специалистов ВЭД"
   short_description: >-
-    Практический гайд для русскоязычных логистов, экспедиторов и
-    специалистов ВЭД. Incoterms 2020, документооборот, переписка с
-    хабами Дубая, Стамбула, Алматы и Шанхая.
+    От новых торговых коридоров (IMEC, Middle Corridor, INSTC) до
+    живых переговоров. Все 11 Incoterms 2020, 400+ терминов,
+    20 email-шаблонов, 10 диалогов с audio MP3.
   category: logistics
-  category_title: "Английский для логистики"
+  category_title: "Английский для логистики и ВЭД"
   price: "3 490 ₽"
   price_old: "4 990 ₽"
-  pages: 104
-  level: "B1 → B2"
-  format: "PDF + шаблоны документов + глоссарий"
+  pages: 59
+  level: "B1 → C1"
+  format: "PDF · Excel-словарь 400+ · Audio MP3 (10 диалогов)"
   payment_url: "https://payment.example/logistics-english"
   cover: "/assets/images/covers/logistics-english.svg"
   pain_points:
     - "Контрагенты в Дубае и Стамбуле пишут так, что половину фраз не понять"
     - "Путаетесь в Incoterms 2020 на английском под давлением сделки"
     - "Не уверены, как правильно эскалировать задержку груза"
-    - "Документация (Bill of Lading, CMR, packing list) — каждый раз заново"
+    - "Документация (BoL, CMR, packing list) — каждый раз заново"
     - "Сложно вести переговоры о тарифах с китайскими и турецкими партнёрами"
   audience_yes:
-    - "Логисты, экспедиторы, специалисты ВЭД"
+    - "Логисты, экспедиторы, специалисты ВЭД, таможенные брокеры"
     - "Sales и закупщики, работающие с международными поставками"
-    - "Уровень английского B1–B2"
+    - "Уровень английского B1–C1"
   audience_no:
     - "Те, кто ищет курс по таможенному регулированию РФ"
     - "Junior без опыта работы с международной логистикой"
   toc:
-    - "Incoterms 2020: 11 терминов с разбором ответственности"
-    - "Документооборот: BoL, CMR, AWB, packing list, COO"
-    - "Переписка с глобальными хабами: Дубай, Стамбул, Алматы, Шанхай"
-    - "Переговоры о тарифах: скрипты и фразы для торга"
-    - "Эскалация задержек и претензии: шаблоны email"
-    - "Sanctions screening: терминология и формулировки"
-    - "The New Silk Road: маршруты, ключевые порты и хабы"
-    - "Customs vocabulary: HS codes, tariffs, duties"
-    - "Glossary: 400 терминов логистики"
+    - "Карта мира 2026: Belt & Road, Северный коридор, Middle Corridor (TITR), IMEC, INSTC"
+    - "Global Hubs: топ-10 портов, сухопутные хабы, авиагрузовые узлы, FTZ"
+    - "Все 11 правил Incoterms 2020 с реальными примерами"
+    - "Транспортные документы и лексика по видам перевозок"
+    - "Складирование, таможня, ценообразование, demurrage, страхование грузов"
+    - "Communication Toolkit: 20 email-шаблонов, переговоры, KPI-отчёты"
+    - "Кризисная коммуникация и эскалация задержек"
+    - "Practice Lab: 10 диалогов с аудио, role-plays, финальный тест 50 вопросов"
+    - "Глоссарий 400+ терминов EN–RU в .xlsx"
 
 - slug: leadership-english
-  title: "The Language of Power"
-  subtitle: "English for Leaders. International Management & C-Level Communications"
+  title: "The Language of Power — English for Leaders"
+  subtitle: "Практическое руководство для руководителей, ведущих переговоры на английском"
   short_description: >-
-    Operating manual для топ-менеджеров и C-level. Совещания совета
-    директоров, переговоры с инвесторами, public speaking, executive
-    presence на английском.
+    Для CEO, CFO, COO, founders и board members уровня B2–C1, выходящих
+    на международный уровень. 78 страниц + 11 приложений, Master
+    Phrasebank на 500+ конструкций, 30-дневный план.
   category: leadership
   category_title: "Английский для руководителей"
   price: "5 490 ₽"
   price_old: "7 490 ₽"
-  pages: 124
+  pages: 78
   level: "B2 → C1"
-  format: "PDF + executive scripts + кейсы"
+  format: "PDF · 11 приложений · Master Phrasebank 500+ конструкций"
   payment_url: "https://payment.example/leadership-english"
   cover: "/assets/images/covers/leadership-english.svg"
   pain_points:
@@ -310,19 +316,63 @@
     - "Сложно вести трудные разговоры (увольнение, конфликт, кризис) на языке"
     - "Ваш английский «работает», но не звучит как у CEO глобальной компании"
   audience_yes:
-    - "Топ-менеджеры, C-level, основатели международных компаний"
-    - "Уровень B2+, нужно отполировать до C1 и executive register"
-    - "Те, кто выступает на конференциях и ведёт переговоры с инвесторами"
+    - "CEO, CFO, COO, founders, board members"
+    - "Senior executives уровня B2–C1, выходящие на международный уровень"
+    - "Те, кто ведёт переговоры, привлекает капитал и общается с board"
   audience_no:
     - "Middle-менеджеры без выхода на международный уровень"
     - "Те, у кого уровень ниже B2"
   toc:
-    - "Executive register: что отличает речь CEO от Senior PM"
-    - "Board meetings: открытие, ведение, закрытие"
-    - "Investor relations: pitch, Q&A, earnings calls"
-    - "Public speaking: keynote structure, storytelling"
-    - "Difficult conversations: увольнение, конфликт, кризис"
-    - "Cross-cultural leadership: US, UK, Asia, Middle East"
-    - "Strategic communications: vision, mission, OKRs"
-    - "Media training: интервью, press releases"
-    - "Executive writing: memos, board updates, all-hands emails"
+    - "The Executive Voice: как звучать как peer, а не как сотрудник"
+    - "Board & Executive Briefings: 90-секундный питч с risk & ask"
+    - "Investor Relations & Earnings Calls: ответы на провокационные вопросы аналитиков"
+    - "Negotiation: Architecture of Influence — 5+ способов сказать «нет»"
+    - "Strategic Storytelling & Presentations: управление вниманием через story"
+    - "Executive Writing: email на 6–8 строк, memo, публичный голос"
+    - "Cross-Cultural Communication: US, UK, Германия, Япония"
+    - "High-Stakes Conversations: кризис, layoff, all-hands"
+    - "Master Phrasebank — 500+ конструкций по 12 ситуациям"
+    - "Executive Glossary, шаблоны, 30-дневный план, Country-by-Country Reference"
+
+- slug: gaming-english
+  title: "Gaming English 2026"
+  subtitle: "Как играть, стримить и общаться с международной аудиторией"
+  short_description: >-
+    Полный гайд для игроков и стримеров: callouts по жанрам, формула
+    WHO + WHAT + WHERE, toxic chat survival, streaming English,
+    Discord-этикет и slang 2026.
+  category: gaming
+  category_title: "Английский для геймеров и стримеров"
+  price: "1 990 ₽"
+  price_old: "2 990 ₽"
+  pages: 67
+  level: "A2 → B1"
+  format: "PDF · 30 000 слов · 800+ готовых фраз"
+  payment_url: "https://payment.example/gaming-english"
+  cover: "/assets/images/covers/gaming-english.svg"
+  genres: "FPS · MOBA · MMO · Battle Royale"
+  platforms: "Twitch · YouTube · Discord"
+  pain_points:
+    - "В международных лобби «рашим бэшку» не работает — никто не понимает"
+    - "Хочется стримить на английском, но не знаешь интро и команд модерации"
+    - "Не получается войти в зарубежную тиму — toxic chat и неправильные callout-ы"
+    - "Слэнг устаревает быстрее, чем учебники успевают его собрать"
+    - "На голосовом чате чувствуешь себя нон-нейтивом — выдают конкретные слова"
+  audience_yes:
+    - "Игроки 16–28 лет с уровнем A2–B1"
+    - "Стримеры, которые хотят выйти на англоязычную аудиторию"
+    - "Те, кто играет в FPS / MOBA / MMO / Battle Royale в международных лобби"
+  audience_no:
+    - "Те, кто играет только на русскоязычных серверах"
+    - "Те, кому нужен academic-английский, а не gaming"
+  toc:
+    - "Почему «рашим бэшку» не работает в международных лобби"
+    - "Universal Gaming Vocabulary: 200 базовых терминов для любого жанра"
+    - "Genre-Specific Callouts: FPS / MOBA / MMO / Battle Royale"
+    - "Voice Comms Etiquette: формула WHO + WHAT + WHERE"
+    - "Toxic Chat Survival: как игнорировать, молчать и разряжать через юмор"
+    - "Streaming English: интро, доносы, команды модерации, работа со спонсорами"
+    - "Discord & Social Media: tryouts, DM-переписка, X-треды, поиск тимы"
+    - "Slang Glossary: 300+ актуальных gaming / Twitch / Gen-Z терминов"
+    - "Pronunciation для геймера: 30 слов, на которых палятся русскоязычные"
+    - "Бонус: интервью с зарубежными организациями — отбор в инт. команду"

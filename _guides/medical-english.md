@@ -1,16 +1,17 @@
 ---
 slug: medical-english
-title: "Medical English: подготовка к OET для врачей и медсестёр"
-subtitle: "Подготовка к OET для врачей и медсестёр"
-short_description: "Полный курс подготовки к OET для медиков, которые хотят работать в UK, Ireland, Australia, ОАЭ. Скрипты консультаций, медицинская терминология, разбор всех частей экзамена."
-description: "PDF-гайд для врачей и медсестёр СНГ: подготовка к OET, скрипты консультаций, медицинская терминология. 116 страниц + 3 mock-теста. Уровень B1–B2."
+title: "Medical English — Подготовка к OET"
+subtitle: "Полный курс с разбором реальных заданий"
+short_description: "Для врачей и медсестёр, нацеленных на работу в UK, Австралии и Канаде. 10 глав, разбор всех 4 модулей OET, протоколы Calgary–Cambridge и SPIKES, 90-дневный план."
+description: "PDF-гайд для врачей и медсестёр СНГ: подготовка к OET, протоколы Calgary–Cambridge и SPIKES, регуляторные пути GMC/NMC/AHPRA. 118 страниц. Уровень B1–B2."
 category: medical
 category_title: "Английский для медиков"
 price: "4 990 ₽"
 price_old: "6 990 ₽"
-pages: 116
+pages: 118
 level: "B1 → B2 (OET 350+)"
-format: "PDF + 3 mock-теста + аудио"
+format: "PDF · глоссарий · 90-дневный планер"
+regulators: "GMC · NMC · AHPRA"
 payment_url: "https://payment.example/medical-english"
 cover: "/assets/images/covers/medical-english.svg"
 breadcrumbs:
@@ -18,29 +19,29 @@ breadcrumbs:
     url: "/guides/"
   - title: "Medical English"
 pain_points:
-  - "Знаете медицинскую теорию на родном, но не можете провести консультацию по-английски"
-  - "Не понимаете, как сказать пациенту «у вас рак», чтобы это было профессионально"
+  - "Знаете медицинскую теорию на родном, но теряете голос на консультации"
+  - "Не понимаете, как сообщить пациенту плохую новость профессионально"
   - "Заваливаетесь на OET Speaking из-за неестественной интонации"
   - "Не различаете medical jargon и layman terms — пациенты не понимают"
-  - "Боитесь регуляторных барьеров GMC / NMC после переезда"
+  - "Боитесь регуляторных барьеров GMC / NMC / AHPRA после переезда"
 audience_yes:
   - "Врачи и медсёстры с подтверждённым медицинским образованием"
   - "Уровень английского B1–B2"
-  - "Цель: сдать OET на B (350+) для работы в UK / Ireland / Australia / UAE"
+  - "Цель: сдать OET на B (350+) для работы в UK, Australia, Canada, ОАЭ"
 audience_no:
   - "Студенты медицинских вузов без клинической практики"
   - "Те, кому нужен IELTS, а не OET"
 toc:
-  - "Формат OET и отличия от IELTS / TOEFL"
-  - "Calgary-Cambridge: фазы консультации на английском"
-  - "History taking: 80 фраз по системам органов"
-  - "Empathy & breaking bad news: SPIKES-протокол"
-  - "Medical terminology: 500 терминов с layman equivalents"
-  - "OET Reading: стратегии Part A/B/C, разбор 3 тестов"
-  - "OET Listening: типы заданий и тренировка"
-  - "OET Writing: referral, discharge, transfer letters"
-  - "OET Speaking: 20 разобранных role-play кейсов"
-  - "Регуляторные шаги: GMC, NMC, AHPRA"
+  - "Введение в OET: формат, регуляторы, план на 12 недель"
+  - "Doctor–patient framework: модель Calgary–Cambridge"
+  - "History taking: 80 фраз по 6 клиническим системам"
+  - "Empathy & breaking bad news: протокол SPIKES"
+  - "Medical terminology: 500 терминов с IPA и layman-объяснением"
+  - "OET Reading: Parts A/B/C, три разобранных теста"
+  - "OET Listening: стратегии, учебный план на базе BMJ и NEJM"
+  - "OET Writing: 15 разобранных писем уровня Grade B+"
+  - "OET Speaking: 20 role-play кейсов по специальностям"
+  - "Regulatory pathways: GMC / NMC / AHPRA после OET"
 faq:
   - question: "В чём отличие OET от IELTS UKVI?"
     answer: "OET — профильный медицинский экзамен, который проверяет английский в контексте клинической практики. Все задания построены вокруг реальных медицинских сценариев: консультации пациента, межкомандная коммуникация, профессиональная переписка. IELTS — общий академический. Многие медицинские регуляторы (GMC, NMC, AHPRA, Medical Council of Ireland) принимают оба, но врачи с базовым английским обычно сдают OET быстрее, потому что лексика ближе к их повседневной работе."
@@ -59,9 +60,9 @@ aggregate_rating:
 
 ## Что вы получаете
 
-PDF-гайд на 116 страниц, 3 полных mock-теста OET с подробным разбором,
-аудио-материалы для тренировки Listening и Speaking, шаблоны referral
-и discharge letters с разборами на оценку B+.
+PDF-гайд на 118 страниц (10 глав по 8–16 страниц) с приложениями: глоссарий
+500+ терминов с IPA и layman-эквивалентами, ответы к drill-упражнениям,
+90-дневный планер подготовки.
 
 ## Как устроен гайд
 
