@@ -128,7 +128,10 @@
       errorEl.textContent = '';
 
       const email = (emailInput.value || '').trim();
-      if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+      // Узкий, безопасный набор символов: предотвращает попадание кавычек/слэшей
+      // в JSON-тело запроса, которое мы потом передаём в ЮKassa через n8n.
+      const EMAIL_RE = /^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$/;
+      if (!email || email.length > 254 || !EMAIL_RE.test(email)) {
         showError('Введите корректный email — на него придёт PDF и чек.');
         emailInput.focus();
         return;
