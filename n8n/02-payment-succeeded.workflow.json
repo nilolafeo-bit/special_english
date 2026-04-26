@@ -4,7 +4,7 @@
     {
       "parameters": {
         "httpMethod": "POST",
-        "path": "yukassa-payment-succeeded",
+        "path": "yukassa",
         "responseMode": "onReceived",
         "responseCode": 200,
         "responseData": "{\"ok\":true}",
@@ -15,7 +15,7 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2,
       "position": [200, 320],
-      "webhookId": "yukassa-payment-succeeded"
+      "webhookId": "yukassa"
     },
     {
       "parameters": {

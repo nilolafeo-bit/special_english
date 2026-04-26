@@ -108,10 +108,10 @@ yukassa:
   create_payment_url: "https://ai-konfu-u70272.vm.elestio.app/webhook/yukassa-create-payment"
 ```
 
-Production URL вебхука второго workflow:
+Production URL вебхука второго workflow (это твой существующий URL):
 
 ```
-https://ai-konfu-u70272.vm.elestio.app/webhook/yukassa-payment-succeeded
+https://ai-konfu-u70272.vm.elestio.app/webhook/yukassa
 ```
 
 Зайди в личный кабинет ЮKassa → **Интеграция → HTTP-уведомления**, добавь этот
