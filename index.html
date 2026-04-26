@@ -1,0 +1,170 @@
+---
+layout: default
+title: "Special English — гайды по специализированному английскому"
+description: "Узкоспециализированные PDF-гайды по английскому: для релокантов, IT, медиков, юристов, логистов, руководителей и родителей. Конкретные сценарии, скрипты и фразы вместо общей теории."
+permalink: /
+---
+
+<section class="home-hero">
+  <div class="container home-hero__inner">
+    <h1>Английский, который решает конкретную задачу</h1>
+    <p class="home-hero__lead">
+      Платные PDF-гайды по узкоспециализированному английскому для конкретных
+      профессий и жизненных ситуаций. Без общей теории — только сценарии,
+      скрипты, шаблоны и фразы, которые работают здесь и сейчас.
+    </p>
+    <div class="home-hero__cta">
+      <a class="btn btn--primary btn--lg" href="{{ '/guides/' | relative_url }}">Выбрать гайд</a>
+      <a class="btn btn--ghost btn--lg" href="#how">Как это работает</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section__title">Все гайды</h2>
+    <p class="section__subtitle">
+      Выберите гайд под конкретную задачу. Все материалы — в формате PDF
+      с дополнительными приложениями. Один платёж, вечный доступ, бесплатные обновления.
+    </p>
+    <div class="guides-grid">
+      {% for g in site.data.guides %}
+        {% include guide-card.html guide=g %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="how">
+  <div class="container">
+    <h2 class="section__title">Почему именно эти гайды</h2>
+    <div class="usps">
+      <div class="usp">
+        <span class="usp__num">01</span>
+        <h3>Узкая специализация вместо общих курсов</h3>
+        <p>
+          Один гайд = одна профессия или одна ситуация. Никаких «English in 30 days».
+          Внутри — лексика, скрипты и шаблоны под реальные задачи: интервью в FAANG,
+          приём пациента в NHS, переписка с лендлордом в Лиссабоне.
+        </p>
+      </div>
+      <div class="usp">
+        <span class="usp__num">02</span>
+        <h3>Применимо с первого дня</h3>
+        <p>
+          Гайды построены вокруг сценариев, с которыми вы сталкиваетесь
+          ежедневно. Каждая глава содержит готовые фразы, e-mail-шаблоны и
+          мини-задания, которые сразу можно использовать в работе или жизни.
+        </p>
+      </div>
+      <div class="usp">
+        <span class="usp__num">03</span>
+        <h3>Свой темп, без подписки</h3>
+        <p>
+          Один платёж — материал ваш навсегда. Никаких куратор-чатов, дедлайнов
+          и «не успел — потерял». Учитесь в ритме, который подходит вашей
+          текущей нагрузке. Обновления — бесплатно.
+        </p>
+      </div>
+      <div class="usp">
+        <span class="usp__num">04</span>
+        <h3>Авторская экспертиза</h3>
+        <p>
+          Над материалами работают практикующие специалисты с опытом за
+          рубежом и международными сертификатами — врачи, юристы, инженеры,
+          логисты, преподаватели CELTA / DELTA.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section__title">Кому подходят гайды</h2>
+    <div class="segments">
+      <div class="segment">
+        <h3>Тем, кто переезжает</h3>
+        <ul>
+          <li>Открывают счёт в зарубежном банке</li>
+          <li>Подают на ВНЖ или резидентство</li>
+          <li>Ведут ребёнка в новую школу</li>
+          <li>Снимают первое жильё за границей</li>
+        </ul>
+      </div>
+      <div class="segment">
+        <h3>Тем, кто работает в IT</h3>
+        <ul>
+          <li>Готовится к интервью в FAANG и EU-стартапы</li>
+          <li>Работает на стендапах и code review</li>
+          <li>Хочет довести B1 до B2+/C1 за 60–90 дней</li>
+          <li>Использует AI как персонального преподавателя</li>
+        </ul>
+      </div>
+      <div class="segment">
+        <h3>Профессионалам</h3>
+        <ul>
+          <li>Врачи: подготовка к OET, работа в UK / Ireland / UAE</li>
+          <li>Юристы: международные контракты и комплаенс</li>
+          <li>Логисты: переписка с глобальными хабами</li>
+          <li>Топ-менеджеры: board meetings и инвест-встречи</li>
+        </ul>
+      </div>
+      <div class="segment">
+        <h3>Родителям</h3>
+        <ul>
+          <li>Хотят дать ребёнку язык в раннем возрасте</li>
+          <li>Не готовы платить репетитору 25 000 ₽ в месяц</li>
+          <li>Уровень родителей — A2–B2</li>
+          <li>Готовы заниматься по 20 минут в день</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <h2 class="section__title">Категории</h2>
+    <div class="categories-grid">
+      {% for cat in site.data.categories %}
+        <a class="category-card" href="{{ '/categories/' | append: cat.slug | append: '/' | relative_url }}">
+          <h3>{{ cat.title }}</h3>
+          <p>{{ cat.short }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% if site.posts.size > 0 %}
+<section class="section">
+  <div class="container">
+    <h2 class="section__title">Статьи блога</h2>
+    <p class="section__subtitle">
+      Разборы кейсов, чек-листы и практические материалы по специализированному
+      английскому — для тех, кто хочет понять подход до покупки.
+    </p>
+    <ul class="posts-list">
+      {% for p in site.posts limit: 6 %}
+        <li>
+          <a href="{{ p.url | relative_url }}">
+            <h3>{{ p.title }}</h3>
+            {% if p.subtitle %}<p>{{ p.subtitle }}</p>{% endif %}
+            <time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%-d %B %Y" }}</time>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    <p class="text-center" style="margin-top: var(--space-5);">
+      <a class="btn btn--ghost" href="{{ '/blog/' | relative_url }}">Все статьи</a>
+    </p>
+  </div>
+</section>
+{% endif %}
+
+<section class="section section--alt">
+  <div class="container">
+    {% include faq-block.html %}
+  </div>
+</section>

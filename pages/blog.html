@@ -1,0 +1,35 @@
+---
+layout: default
+permalink: /blog/
+title: "Блог о специализированном английском"
+description: "Статьи, разборы кейсов, чек-листы и практические материалы по специализированному английскому: релокация, IT, медицина, право, логистика, лидерство, родители."
+breadcrumbs:
+  - title: "Блог"
+---
+
+<section class="page-content container">
+  {% include breadcrumbs.html %}
+  <header class="page-content__header">
+    <h1>Блог</h1>
+    <p class="page-content__subtitle">
+      Разборы кейсов, чек-листы и практические материалы по специализированному
+      английскому. Для тех, кто хочет понять подход, прежде чем покупать гайд.
+    </p>
+  </header>
+
+  {% if site.posts.size > 0 %}
+    <ul class="posts-list">
+      {% for p in site.posts %}
+        <li>
+          <a href="{{ p.url | relative_url }}">
+            <h3>{{ p.title }}</h3>
+            {% if p.subtitle %}<p>{{ p.subtitle }}</p>{% endif %}
+            <time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%-d %B %Y" }}</time>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="text-center">Скоро здесь появятся первые статьи.</p>
+  {% endif %}
+</section>

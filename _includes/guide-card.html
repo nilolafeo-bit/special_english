@@ -1,0 +1,18 @@
+{% assign g = include.guide %}
+<article class="guide-card">
+  <a class="guide-card__link" href="{{ '/guides/' | append: g.slug | append: '/' | relative_url }}">
+    <div class="guide-card__cover">
+      <img src="{{ g.cover | relative_url }}" alt="Обложка гайда «{{ g.title }}»" loading="lazy" width="320" height="420">
+    </div>
+    <div class="guide-card__body">
+      <span class="guide-card__category">{{ g.category_title }}</span>
+      <h3 class="guide-card__title">{{ g.title }}</h3>
+      <p class="guide-card__subtitle">{{ g.subtitle }}</p>
+      <div class="guide-card__meta">
+        <span class="guide-card__price">{{ g.price }}</span>
+        {% if g.price_old %}<span class="guide-card__price-old">{{ g.price_old }}</span>{% endif %}
+        <span class="guide-card__pages">{{ g.pages }} стр.</span>
+      </div>
+    </div>
+  </a>
+</article>

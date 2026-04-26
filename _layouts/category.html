@@ -1,0 +1,60 @@
+---
+layout: default
+---
+<article class="category">
+  <div class="container">
+    {% include breadcrumbs.html %}
+  </div>
+
+  <header class="category__hero container">
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="category__subtitle">{{ page.subtitle }}</p>{% endif %}
+  </header>
+
+  <section class="category__intro">
+    <div class="container prose">
+      {{ content }}
+    </div>
+  </section>
+
+  {% assign cat_data = site.data.categories | where: 'slug', page.slug | first %}
+  {% if cat_data and cat_data.guides %}
+  <section class="category__guides">
+    <div class="container">
+      <h2>Гайды по теме</h2>
+      <div class="guides-grid">
+        {% for slug in cat_data.guides %}
+          {% assign g = site.data.guides | where: 'slug', slug | first %}
+          {% if g %}{% include guide-card.html guide=g %}{% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% assign cat_posts = site.posts | where: 'categories', page.slug %}
+  {% if cat_posts.size > 0 %}
+  <section class="category__posts">
+    <div class="container">
+      <h2>Статьи по теме</h2>
+      <ul class="posts-list">
+        {% for p in cat_posts limit: 10 %}
+          <li>
+            <a href="{{ p.url | relative_url }}">
+              <h3>{{ p.title }}</h3>
+              {% if p.subtitle %}<p>{{ p.subtitle }}</p>{% endif %}
+              <time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%-d %B %Y" }}</time>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.faq %}
+  <section class="category__faq">
+    <div class="container">{% include faq-block.html items=page.faq %}</div>
+  </section>
+  {% endif %}
+</article>

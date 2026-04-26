@@ -1,0 +1,132 @@
+---
+layout: default
+---
+<article class="guide" itemscope itemtype="https://schema.org/Product">
+  <div class="container">
+    {% include breadcrumbs.html %}
+  </div>
+
+  <section class="guide__hero">
+    <div class="container guide__hero-inner">
+      <div class="guide__hero-text">
+        <p class="guide__category">
+          <a href="{{ '/categories/' | append: page.category | append: '/' | relative_url }}">
+            {{ page.category_title }}
+          </a>
+        </p>
+        <h1 itemprop="name">{{ page.title }}</h1>
+        <p class="guide__subtitle" itemprop="description">{{ page.subtitle }}</p>
+        <p class="guide__short">{{ page.short_description }}</p>
+
+        <ul class="guide__specs">
+          <li><strong>{{ page.pages }}</strong> страниц</li>
+          <li><strong>{{ page.level }}</strong> уровень</li>
+          <li>{{ page.format }}</li>
+        </ul>
+
+        <div class="guide__buy">
+          <div class="guide__price">
+            <span class="guide__price-current">{{ page.price }}</span>
+            {% if page.price_old %}<span class="guide__price-old">{{ page.price_old }}</span>{% endif %}
+          </div>
+          <a class="btn btn--primary btn--lg" href="{{ page.payment_url }}" rel="nofollow noopener" data-buy="{{ page.slug }}">
+            Купить гайд
+          </a>
+          <p class="guide__buy-note">Мгновенная отправка PDF на email после оплаты</p>
+        </div>
+      </div>
+
+      <div class="guide__hero-cover">
+        <img src="{{ page.cover | relative_url }}" alt="Обложка гайда «{{ page.title }}»" width="420" height="560">
+      </div>
+    </div>
+  </section>
+
+  {% if page.pain_points %}
+  <section class="guide__pain">
+    <div class="container">
+      <h2>Знакомо?</h2>
+      <ul class="guide__pain-list">
+        {% for p in page.pain_points %}<li>{{ p }}</li>{% endfor %}
+      </ul>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.toc %}
+  <section class="guide__toc">
+    <div class="container">
+      <h2>Что внутри гайда</h2>
+      <ol class="guide__toc-list">
+        {% for chapter in page.toc %}<li>{{ chapter }}</li>{% endfor %}
+      </ol>
+      <p class="guide__toc-note">Полное оглавление с номерами страниц — в первых разворотах PDF.</p>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.audience_yes or page.audience_no %}
+  <section class="guide__audience">
+    <div class="container guide__audience-grid">
+      {% if page.audience_yes %}
+      <div class="guide__audience-col guide__audience-col--yes">
+        <h2>Подойдёт, если</h2>
+        <ul>{% for a in page.audience_yes %}<li>{{ a }}</li>{% endfor %}</ul>
+      </div>
+      {% endif %}
+      {% if page.audience_no %}
+      <div class="guide__audience-col guide__audience-col--no">
+        <h2>Не подойдёт, если</h2>
+        <ul>{% for a in page.audience_no %}<li>{{ a }}</li>{% endfor %}</ul>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="guide__content">
+    <div class="container prose">
+      {{ content }}
+    </div>
+  </section>
+
+  {% assign guide_reviews = site.data.reviews | where: 'guide_slug', page.slug %}
+  {% if guide_reviews.size > 0 %}
+  <section class="guide__reviews">
+    <div class="container">
+      <h2>Отзывы</h2>
+      <div class="reviews-grid">
+        {% for r in guide_reviews %}
+          <blockquote class="review">
+            <p>{{ r.text }}</p>
+            <footer>
+              <strong>{{ r.author }}</strong>
+              <span>{{ r.role }}</span>
+            </footer>
+          </blockquote>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.faq %}
+  <section class="guide__faq">
+    <div class="container">{% include faq-block.html items=page.faq title="Частые вопросы об этом гайде" %}</div>
+  </section>
+  {% endif %}
+
+  <section class="guide__final-cta">
+    <div class="container">
+      <h2>Готовы взять гайд?</h2>
+      <p>Один платёж — вечный доступ. Бесплатные обновления.</p>
+      <a class="btn btn--primary btn--lg" href="{{ page.payment_url }}" rel="nofollow noopener">
+        Купить за {{ page.price }}
+      </a>
+    </div>
+  </section>
+
+  <div class="container">
+    {% include related-guides.html current_slug=page.slug %}
+  </div>
+</article>

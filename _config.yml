@@ -1,0 +1,114 @@
+# ============================================================================
+# SITE METADATA — поменяй эти значения под свой проект
+# ============================================================================
+title: "Special English — гайды по специализированному английскому"
+tagline: "Узкоспециализированные PDF-гайды по английскому для конкретных профессий и жизненных ситуаций"
+description: >-
+  Платные PDF-гайды по узкоспециализированному английскому: для релокантов,
+  IT-разработчиков, врачей, юристов, логистов, руководителей и родителей.
+  Конкретные сценарии, скрипты и фразы вместо общей теории.
+author: "Special English"
+email: "hello@your-domain.ru"
+url: "https://your-domain.ru"          # ← поменять после подключения домена
+baseurl: ""                            # пусто, если сайт в корне домена
+lang: ru
+timezone: Europe/Moscow
+
+# ============================================================================
+# SOCIAL & VERIFICATIONS — заполни после регистрации
+# ============================================================================
+social:
+  telegram: ""
+  instagram: ""
+  vk: ""
+  youtube: ""
+  email: "hello@your-domain.ru"
+
+# Верификация поисковиков (вставить после регистрации в Яндекс.Вебмастере и
+# Google Search Console)
+yandex_verification: ""
+google_site_verification: ""
+
+# Аналитика (вставить ID после подключения)
+yandex_metrika_id: ""
+google_analytics_id: ""
+
+# OpenGraph / Twitter — изображение по умолчанию (1200×630)
+og_image: "/assets/images/og-default.svg"
+twitter:
+  username: ""
+  card: summary_large_image
+
+# ============================================================================
+# COLLECTIONS — продуктовые гайды и категорийные pillar-страницы
+# ============================================================================
+collections:
+  guides:
+    output: true
+    permalink: /guides/:path/
+  categories:
+    output: true
+    permalink: /categories/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: guides
+    values:
+      layout: guide
+  - scope:
+      path: ""
+      type: categories
+    values:
+      layout: category
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+# ============================================================================
+# BUILD
+# ============================================================================
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:slug/
+
+# paginate: 9
+# paginate_path: "/blog/page:num/"
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+
+sass:
+  style: compressed
+
+# ============================================================================
+# PLUGINS
+# ============================================================================
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-paginate
+
+# ============================================================================
+# EXCLUDE FROM BUILD
+# ============================================================================
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - node_modules
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - .gitignore

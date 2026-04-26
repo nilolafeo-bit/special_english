@@ -1,0 +1,61 @@
+---
+layout: default
+---
+<article class="post container">
+  {% include breadcrumbs.html %}
+
+  <header class="post__header">
+    {% if page.categories %}
+      <p class="post__category">
+        {% for cat in page.categories limit: 1 %}
+          <a href="{{ '/categories/' | append: cat | append: '/' | relative_url }}">
+            {% assign cat_data = site.data.categories | where: 'slug', cat | first %}
+            {{ cat_data.title | default: cat }}
+          </a>
+        {% endfor %}
+      </p>
+    {% endif %}
+    <h1 class="post__title">{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="post__subtitle">{{ page.subtitle }}</p>{% endif %}
+    <p class="post__meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+      {% if page.reading_time %} · {{ page.reading_time }} мин чтения{% endif %}
+    </p>
+  </header>
+
+  <div class="prose post__body">
+    {{ content }}
+  </div>
+
+  {% if page.faq %}
+    <div class="post__faq">{% include faq-block.html items=page.faq title="Частые вопросы по теме" %}</div>
+  {% endif %}
+
+  {% if page.related_guide %}
+    {% assign rg = site.data.guides | where: 'slug', page.related_guide | first %}
+    {% if rg %}
+      <aside class="post__cta">
+        <h2>Связанный гайд</h2>
+        <p>{{ rg.short_description }}</p>
+        <a class="btn btn--primary" href="{{ '/guides/' | append: rg.slug | append: '/' | relative_url }}">
+          Открыть гайд «{{ rg.title }}»
+        </a>
+      </aside>
+    {% endif %}
+  {% endif %}
+
+  {% if page.categories.first %}
+    {% assign cat_slug = page.categories | first %}
+    {% assign related_posts = site.posts | where: 'categories', cat_slug | where_exp: "p", "p.url != page.url" %}
+    {% if related_posts.size > 0 %}
+      <section class="post__related">
+        <h2>Ещё в этой категории</h2>
+        <ul>
+          {% for p in related_posts limit: 4 %}
+            <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+  {% endif %}
+</article>

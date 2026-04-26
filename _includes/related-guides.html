@@ -1,0 +1,11 @@
+{% assign current_slug = include.current_slug %}
+{% assign limit = include.limit | default: 3 %}
+{% assign related = site.data.guides | where_exp: "g", "g.slug != current_slug" %}
+<section class="related-guides">
+  <h2 class="related-guides__title">{{ include.title | default: "А ещё посмотрите" }}</h2>
+  <div class="related-guides__grid">
+    {% for g in related limit: limit %}
+      {% include guide-card.html guide=g %}
+    {% endfor %}
+  </div>
+</section>

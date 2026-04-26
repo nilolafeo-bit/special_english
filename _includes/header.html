@@ -1,0 +1,30 @@
+<header class="site-header" role="banner">
+  <div class="container site-header__inner">
+    <a class="site-header__logo" href="{{ '/' | relative_url }}" aria-label="На главную {{ site.title }}">
+      <span class="site-header__logo-mark" aria-hidden="true">SE</span>
+      <span class="site-header__logo-text">Special English</span>
+    </a>
+
+    <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-header__nav" id="primary-nav" aria-label="Главное меню">
+      <ul>
+        <li><a href="{{ '/guides/' | relative_url }}">Все гайды</a></li>
+        <li class="has-submenu">
+          <button type="button" aria-expanded="false">Категории</button>
+          <ul class="submenu">
+            {% for cat in site.data.categories %}
+              <li><a href="{{ '/categories/' | append: cat.slug | append: '/' | relative_url }}">{{ cat.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li><a href="{{ '/blog/' | relative_url }}">Блог</a></li>
+        <li><a href="{{ '/about/' | relative_url }}">Об авторе</a></li>
+        <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
+        <li><a href="{{ '/contacts/' | relative_url }}">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

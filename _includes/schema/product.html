@@ -1,0 +1,27 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | default: page.subtitle | jsonify }},
+  "image": "{{ site.url }}{{ site.baseurl }}{{ page.cover }}",
+  "brand": {
+    "@type": "Brand",
+    "name": {{ site.author | jsonify }}
+  },
+  "category": {{ page.category_title | jsonify }},
+  "offers": {
+    "@type": "Offer",
+    "url": "{{ site.url }}{{ site.baseurl }}{{ page.url }}",
+    "priceCurrency": "RUB",
+    "price": "{{ page.price | remove: ' ' | remove: '₽' | strip }}",
+    "availability": "https://schema.org/InStock",
+    "category": "DigitalGood"
+  }{% if page.aggregate_rating %},
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ page.aggregate_rating.value }}",
+    "reviewCount": "{{ page.aggregate_rating.count }}"
+  }{% endif %}
+}
+</script>

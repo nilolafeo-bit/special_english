@@ -1,0 +1,48 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="container site-footer__inner">
+    <div class="site-footer__col site-footer__col--about">
+      <a class="site-footer__logo" href="{{ '/' | relative_url }}">Special English</a>
+      <p>{{ site.tagline }}</p>
+    </div>
+
+    <div class="site-footer__col">
+      <h3>Гайды</h3>
+      <ul>
+        {% for g in site.data.guides limit: 8 %}
+          <li><a href="{{ '/guides/' | append: g.slug | append: '/' | relative_url }}">{{ g.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="site-footer__col">
+      <h3>Сайт</h3>
+      <ul>
+        <li><a href="{{ '/about/' | relative_url }}">Об авторе</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">Блог</a></li>
+        <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
+        <li><a href="{{ '/contacts/' | relative_url }}">Контакты</a></li>
+        <li><a href="{{ '/offer/' | relative_url }}">Публичная оферта</a></li>
+        <li><a href="{{ '/terms/' | relative_url }}">Пользовательское соглашение</a></li>
+        <li><a href="{{ '/privacy/' | relative_url }}">Политика конфиденциальности</a></li>
+      </ul>
+    </div>
+
+    <div class="site-footer__col">
+      <h3>Контакты</h3>
+      <ul>
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        {% if site.social.telegram != "" %}<li><a href="https://t.me/{{ site.social.telegram }}" rel="noopener">Telegram</a></li>{% endif %}
+        {% if site.social.vk != "" %}<li><a href="https://vk.com/{{ site.social.vk }}" rel="noopener">ВКонтакте</a></li>{% endif %}
+        {% if site.social.youtube != "" %}<li><a href="https://youtube.com/@{{ site.social.youtube }}" rel="noopener">YouTube</a></li>{% endif %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom container">
+    <p>© {{ 'now' | date: '%Y' }} {{ site.author }}. Все материалы защищены авторским правом.</p>
+    <p class="site-footer__legal">
+      Информация на сайте не является публичной офертой. Условия покупки —
+      на странице <a href="{{ '/offer/' | relative_url }}">публичной оферты</a>.
+    </p>
+  </div>
+</footer>

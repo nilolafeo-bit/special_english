@@ -1,0 +1,44 @@
+# Категорийные pillar-страницы — главные SEO-кластеры сайта.
+# slug должен совпадать с именем файла в _categories/.
+
+- slug: relocation
+  title: "Английский для релокации"
+  short: "Скрипты для банка, аренды, врача, школы и госуслуг за границей."
+  icon: globe
+  guides: ["relocation-english"]
+
+- slug: it
+  title: "Английский для IT"
+  short: "Технические интервью, AI-практика, рабочая коммуникация на B2+."
+  icon: code
+  guides: ["it-interview-english", "ai-first-english"]
+
+- slug: medical
+  title: "Английский для медиков"
+  short: "OET, консультации пациентов, медицинская терминология."
+  icon: stethoscope
+  guides: ["medical-english"]
+
+- slug: legal
+  title: "Английский для юристов"
+  short: "Контракты, sanctions compliance, регуляторика ЕС и США."
+  icon: scale
+  guides: ["legal-english"]
+
+- slug: logistics
+  title: "Английский для логистики и ВЭД"
+  short: "Incoterms, документооборот, переписка с глобальными хабами."
+  icon: truck
+  guides: ["logistics-english"]
+
+- slug: leadership
+  title: "Английский для руководителей"
+  short: "Board meetings, инвесторы, public speaking, executive register."
+  icon: crown
+  guides: ["leadership-english"]
+
+- slug: parents
+  title: "Английский для родителей"
+  short: "Как помочь ребёнку выучить язык без репетитора."
+  icon: heart
+  guides: ["english-for-parents"]

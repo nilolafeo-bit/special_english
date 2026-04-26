@@ -1,0 +1,12 @@
+{% assign items = include.items | default: site.data.faq %}
+<section class="faq" aria-labelledby="faq-title">
+  <h2 id="faq-title" class="faq__title">{{ include.title | default: "Частые вопросы" }}</h2>
+  <div class="faq__list">
+    {% for item in items %}
+      <details class="faq__item">
+        <summary class="faq__question">{{ item.question }}</summary>
+        <div class="faq__answer">{{ item.answer | markdownify }}</div>
+      </details>
+    {% endfor %}
+  </div>
+</section>

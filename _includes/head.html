@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#0F172A">
+
+{% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
+
+{% seo %}
+
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+{% if site.yandex_verification != "" %}
+<meta name="yandex-verification" content="{{ site.yandex_verification }}">
+{% endif %}
+{% if site.google_site_verification != "" %}
+<meta name="google-site-verification" content="{{ site.google_site_verification }}">
+{% endif %}
+
+{% include schema/website.html %}
+{% include schema/organization.html %}
+
+{% if page.layout == "guide" %}{% include schema/product.html %}{% endif %}
+{% if page.layout == "post" %}{% include schema/article.html %}{% endif %}
+{% if page.faq or page.layout == "guide" %}{% include schema/faq.html %}{% endif %}
+{% include schema/breadcrumbs.html %}

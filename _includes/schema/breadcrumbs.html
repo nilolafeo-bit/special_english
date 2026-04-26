@@ -1,0 +1,22 @@
+{% if page.breadcrumbs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "{{ site.url }}{{ site.baseurl }}/"
+    }{% for crumb in page.breadcrumbs %},
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index | plus: 1 }},
+      "name": {{ crumb.title | jsonify }}{% unless forloop.last %},
+      "item": "{{ site.url }}{{ site.baseurl }}{{ crumb.url }}"{% endunless %}
+    }{% endfor %}
+  ]
+}
+</script>
+{% endif %}
