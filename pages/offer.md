@@ -25,7 +25,7 @@ breadcrumbs:
 оплатить и принять продукт.
 
 2.2. Перечень доступных продуктов и их стоимость размещены на сайте
-**your-domain.ru** в разделе [Гайды](/guides/).
+**special-english.ru** в разделе [Гайды](/guides/).
 
 ## 3. Порядок оформления заказа и оплаты
 
@@ -42,14 +42,14 @@ breadcrumbs:
 скачивание цифрового продукта.
 
 4.2. Письмо доставляется в течение 30 минут с момента оплаты. При задержке —
-обращение на **[hello@your-domain.ru](mailto:hello@your-domain.ru)**.
+обращение на **[aiinformatorbot@gmail.com](mailto:aiinformatorbot@gmail.com)**.
 
 ## 5. Возврат
 
 5.1. Покупатель вправе запросить возврат денежных средств в течение
 **14 дней** с момента покупки без объяснения причин.
 
-5.2. Запрос на возврат направляется на **[hello@your-domain.ru](mailto:hello@your-domain.ru)**
+5.2. Запрос на возврат направляется на **[aiinformatorbot@gmail.com](mailto:aiinformatorbot@gmail.com)**
 с указанием:
 - email, на который оформлялась покупка;
 - даты покупки;
@@ -91,7 +91,7 @@ breadcrumbs:
 Расчётный счёт: **[номер]**
 Банк: **[наименование банка]**
 БИК: **[БИК]**
-Email: **[hello@your-domain.ru](mailto:hello@your-domain.ru)**
+Email: **[aiinformatorbot@gmail.com](mailto:aiinformatorbot@gmail.com)**
 
 ---
 

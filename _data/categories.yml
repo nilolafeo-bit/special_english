@@ -21,7 +21,7 @@
 
 - slug: legal
   title: "Английский для юристов"
-  short: "Контракты, sanctions compliance, регуляторика ЕС и США."
+  short: "Контракты, sanctions compliance, регуляторика ЕС и США 2026."
   icon: scale
   guides: ["legal-english"]
 
@@ -42,3 +42,9 @@
   short: "Как помочь ребёнку выучить язык без репетитора."
   icon: heart
   guides: ["english-for-parents"]
+
+- slug: gaming
+  title: "Английский для геймеров и стримеров"
+  short: "Callouts в международных лобби, стриминг, Discord, slang 2026."
+  icon: gamepad
+  guides: ["gaming-english"]

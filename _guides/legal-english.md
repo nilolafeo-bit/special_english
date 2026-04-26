@@ -1,16 +1,17 @@
 ---
 slug: legal-english
 title: "Legal English: Contracts & Compliance 2026"
-subtitle: "Справочник для юристов международной практики"
-short_description: "Рабочий справочник для юристов, работающих с международными контрактами, санкционным комплаенсом и новой регуляторикой ЕС/США. Издание первое — апрель 2026."
-description: "PDF-справочник Legal English 2026 для юристов: контракты, sanctions compliance, регуляторика ЕС и США. 132 страницы, 600 терминов, шаблоны. Уровень B2+."
+subtitle: "Рабочий справочник для юристов международной практики"
+short_description: "Для юристов, работающих с международными контрактами, санкционным комплаенсом и новой регуляторикой ЕС/США. Издание апрель 2026 года — с AI Act, DORA, CSDDD и 19-м пакетом санкций ЕС."
+description: "PDF-справочник Legal English 2026 для юристов: контракты, sanctions, AI Act, DORA, CSDDD. 142 страницы, Pocket Glossary 1500+ терминов, Clause Bank 60+. Уровень B2+."
 category: legal
 category_title: "Английский для юристов"
 price: "5 990 ₽"
 price_old: "7 990 ₽"
-pages: 132
+pages: 142
 level: "B2+"
-format: "PDF + справочник терминов + шаблоны"
+format: "PDF · Pocket Glossary 1500+ · Clause Bank 60+"
+regulators: "AI Act · DORA · CSDDD · 19-й пакет санкций ЕС · OFAC · OFSI · GDPR · FCPA · UKBA · LMA 2025"
 payment_url: "https://payment.example/legal-english"
 cover: "/assets/images/covers/legal-english.svg"
 breadcrumbs:
@@ -24,22 +25,23 @@ pain_points:
   - "Боитесь упустить нюанс в переписке с зарубежным контрагентом"
   - "Сложно объяснить клиенту риски на профессиональном английском"
 audience_yes:
-  - "Юристы корпоративной и арбитражной практики"
-  - "Compliance-офицеры и in-house lawyers"
-  - "Те, кто работает с международными контрактами и сделками M&A"
+  - "Практикующие юристы и in-house counsel"
+  - "Compliance-офицеры и junior lawyers"
+  - "Готовящиеся к TOLES / ILEC / LL.M."
 audience_no:
   - "Студенты-юристы без практики"
   - "Юристы, работающие только с локальным правом"
 toc:
-  - "Анатомия контракта: структура и стандартные clauses"
-  - "Sanctions compliance: ЕС, США, UK — терминология и риски"
-  - "GDPR, AI Act, DSA: новая регуляторика ЕС 2024–2026"
-  - "Boilerplate clauses: governing law, jurisdiction, force majeure"
-  - "M&A: due diligence, SPA, representations & warranties"
-  - "Litigation & arbitration vocabulary"
-  - "Email templates: client communication, opposing counsel"
-  - "Translation pitfalls: false friends в legal English"
-  - "Glossary: 600 терминов с определениями"
+  - "Plain Legal English, grammar traps для юристов, Civil law vs Common law"
+  - "Архитектура контракта: клаузы (Reps & Warranties, MAC, LoL, IP, Non-compete)"
+  - "Boilerplate, governing law, SPA / SHA / LOI / LMA / SaaS"
+  - "Sanctions English, Anti-Bribery & AML"
+  - "AI Act + GDPR, DORA, CSRD + CSDDD"
+  - "Negotiation English и Legal Writing"
+  - "Due Diligence и подготовка к экзаменам TOLES / ILEC"
+  - "Pocket Glossary — 1500+ терминов RU ↔ EN"
+  - "Clause Bank — 60+ готовых клаузул"
+  - "12 чек-листов · 20 шаблонов email & memo"
 faq:
   - question: "Гайд — это юридический совет?"
     answer: "Нет. Это языковой и терминологический справочник для юристов. Все правовые формулировки и шаблоны должны проходить проверку у юриста, обладающего лицензией в соответствующей юрисдикции. Гайд не заменяет юридическую консультацию."
@@ -58,7 +60,9 @@ aggregate_rating:
 
 ## Что вы получаете
 
-PDF-справочник на 132 страницы, глоссарий из 600 терминов с определениями
+PDF-справочник на 142 страницы, Pocket Glossary из 1500+ терминов RU↔EN,
+Clause Bank на 60+ готовых клаузул с переводом, 20 шаблонов email и memo,
+12 контрольных чек-листов, ответы к drill-упражнениям
 и контекстными примерами, набор e-mail-шаблонов для типовых ситуаций
 (переписка с клиентом, opposing counsel, регулятором), сравнительные
 таблицы terminology по ключевым клаузам.

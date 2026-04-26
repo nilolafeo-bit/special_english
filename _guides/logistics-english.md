@@ -1,16 +1,16 @@
 ---
 slug: logistics-english
-title: "Logistics English 2026: The New Silk Road & Global Hubs"
-subtitle: "The New Silk Road & Global Hubs"
-short_description: "Практический гайд для русскоязычных логистов, экспедиторов и специалистов ВЭД. Incoterms 2020, документооборот, переписка с хабами Дубая, Стамбула, Алматы и Шанхая."
-description: "PDF-гайд Logistics English 2026 для логистов и ВЭД: Incoterms, документы, переписка с глобальными хабами. 104 страницы, шаблоны, глоссарий 400 терминов."
+title: "Logistics English 2026"
+subtitle: "Практический гайд для логистов и специалистов ВЭД"
+short_description: "От новых торговых коридоров (IMEC, Middle Corridor, INSTC) до живых переговоров. Все 11 Incoterms 2020, 400+ терминов, 20 email-шаблонов, 10 диалогов с audio MP3."
+description: "PDF-гайд Logistics English 2026 для логистов и ВЭД: карта 2026, Incoterms, communication toolkit, practice lab. 59 страниц + Excel-словарь 400+ + аудио."
 category: logistics
 category_title: "Английский для логистики"
 price: "3 490 ₽"
 price_old: "4 990 ₽"
-pages: 104
-level: "B1 → B2"
-format: "PDF + шаблоны документов + глоссарий"
+pages: 59
+level: "B1 → C1"
+format: "PDF · Excel-словарь 400+ · Audio MP3 (10 диалогов)"
 payment_url: "https://payment.example/logistics-english"
 cover: "/assets/images/covers/logistics-english.svg"
 breadcrumbs:
@@ -24,22 +24,22 @@ pain_points:
   - "Документация (Bill of Lading, CMR, packing list) — каждый раз заново"
   - "Сложно вести переговоры о тарифах с китайскими и турецкими партнёрами"
 audience_yes:
-  - "Логисты, экспедиторы, специалисты ВЭД"
+  - "Логисты, экспедиторы, специалисты ВЭД, таможенные брокеры"
   - "Sales и закупщики, работающие с международными поставками"
-  - "Уровень английского B1–B2"
+  - "Уровень английского B1–C1"
 audience_no:
   - "Те, кто ищет курс по таможенному регулированию РФ"
   - "Junior без опыта работы с международной логистикой"
 toc:
-  - "Incoterms 2020: 11 терминов с разбором ответственности"
-  - "Документооборот: BoL, CMR, AWB, packing list, COO"
-  - "Переписка с глобальными хабами: Дубай, Стамбул, Алматы, Шанхай"
-  - "Переговоры о тарифах: скрипты и фразы для торга"
-  - "Эскалация задержек и претензии: шаблоны email"
-  - "Sanctions screening: терминология и формулировки"
-  - "The New Silk Road: маршруты, ключевые порты и хабы"
-  - "Customs vocabulary: HS codes, tariffs, duties"
-  - "Glossary: 400 терминов логистики"
+  - "Карта мира 2026: Belt & Road, Middle Corridor, IMEC, INSTC, Арктика"
+  - "Global Hubs: топ-10 портов 2026, сухопутные хабы, FTZ, bonded warehouses"
+  - "Все 11 правил Incoterms 2020 с разбором на реальных примерах"
+  - "Транспортные документы: BoL, CMR, AWB, packing list, COO"
+  - "Лексика по видам перевозок, складированию, таможне, demurrage"
+  - "Communication Toolkit: 20 email-шаблонов, KPI-отчёты, кризисная коммуникация"
+  - "Practice Lab: 10 диалогов с переводом и audio, role-plays, кейсы"
+  - "Финальный тест из 50 вопросов для самопроверки"
+  - "Glossary: 400+ терминов EN–RU в формате .xlsx"
 faq:
   - question: "Включает ли гайд таможенное оформление РФ?"
     answer: "Нет — российская таможенная специфика здесь не разбирается. Гайд решает задачу англоязычной коммуникации с международными контрагентами, портами, экспедиторами. Для российской таможни нужны отдельные специализированные источники."
@@ -58,7 +58,8 @@ aggregate_rating:
 
 ## Что вы получаете
 
-PDF-гайд на 104 страницы, глоссарий из 400 терминов логистики, шаблоны
+PDF-гайд на 59 страниц + Excel-словарь на 400+ терминов EN–RU,
+audio MP3 к 10 диалогам, шаблоны
 основных документов (BoL, CMR, AWB, packing list, COO, commercial invoice),
 e-mail-шаблоны для переписки с экспедиторами, портами и таможенными
 брокерами, сравнительные таблицы по Incoterms 2020.

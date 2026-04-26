@@ -1,16 +1,16 @@
 ---
 slug: leadership-english
-title: "The Language of Power: English for Leaders"
-subtitle: "English for Leaders. International Management & C-Level Communications"
-short_description: "Operating manual для топ-менеджеров и C-level. Совещания совета директоров, переговоры с инвесторами, public speaking, executive presence на английском."
-description: "PDF-гайд для C-level: executive English, board meetings, инвесторы, public speaking, кросс-культурное лидерство. 124 страницы, кейсы и скрипты. Уровень B2+."
+title: "The Language of Power — English for Leaders"
+subtitle: "Практическое руководство для руководителей, ведущих переговоры на английском"
+short_description: "Для CEO, CFO, COO, founders и board members уровня B2–C1, выходящих на международный уровень. 78 страниц + 11 приложений, Master Phrasebank на 500+ конструкций, 30-дневный план."
+description: "PDF-гайд для C-level: executive voice, board briefings, investor relations, negotiation, storytelling, cross-cultural communication. 78 страниц + 11 приложений. Уровень B2–C1."
 category: leadership
 category_title: "Английский для руководителей"
 price: "5 490 ₽"
 price_old: "7 490 ₽"
-pages: 124
+pages: 78
 level: "B2 → C1"
-format: "PDF + executive scripts + кейсы"
+format: "PDF · 11 приложений · Master Phrasebank 500+ конструкций"
 payment_url: "https://payment.example/leadership-english"
 cover: "/assets/images/covers/leadership-english.svg"
 breadcrumbs:
@@ -24,22 +24,23 @@ pain_points:
   - "Сложно вести трудные разговоры (увольнение, конфликт, кризис) на языке"
   - "Ваш английский «работает», но не звучит как у CEO глобальной компании"
 audience_yes:
-  - "Топ-менеджеры, C-level, основатели международных компаний"
-  - "Уровень B2+, нужно отполировать до C1 и executive register"
-  - "Те, кто выступает на конференциях и ведёт переговоры с инвесторами"
+  - "CEO, CFO, COO, founders, board members, senior executives"
+  - "Уровень B2–C1, нужно слышаться как peer, а не как сотрудник"
+  - "Привлекают капитал, выходят на board, ведут earnings calls"
 audience_no:
   - "Middle-менеджеры без выхода на международный уровень"
   - "Те, у кого уровень ниже B2"
 toc:
-  - "Executive register: что отличает речь CEO от Senior PM"
-  - "Board meetings: открытие, ведение, закрытие"
-  - "Investor relations: pitch, Q&A, earnings calls"
-  - "Public speaking: keynote structure, storytelling"
-  - "Difficult conversations: увольнение, конфликт, кризис"
-  - "Cross-cultural leadership: US, UK, Asia, Middle East"
-  - "Strategic communications: vision, mission, OKRs"
-  - "Media training: интервью, press releases"
-  - "Executive writing: memos, board updates, all-hands emails"
+  - "The Executive Voice — как звучать как peer, а не как сотрудник"
+  - "Board & Executive Briefings — 90-секундный питч с risk & ask"
+  - "Investor Relations & Earnings Calls — ответы на провокации аналитиков"
+  - "Negotiation: Architecture of Influence — 5+ способов сказать no"
+  - "Strategic Storytelling & Presentations — внимание через story"
+  - "Executive Writing — email в 6–8 строк, memo, публичный голос"
+  - "Cross-Cultural Communication — стиль disagreement в US, UK, DE, JP"
+  - "High-Stakes Conversations — кризис, layoff, all-hands"
+  - "Master Phrasebank — 500+ конструкций по 12 ситуациям"
+  - "Executive Glossary — 300 терминов, 30-дневный план, Country Reference"
 faq:
   - question: "Чем executive register отличается от обычного английского?"
     answer: "Executive register — это набор лексических, синтаксических и риторических паттернов, которые отличают речь топ-менеджера от речи мидл-уровня. Точные глаголы вместо общих («drive» вместо «do»), сложноподчинённые конструкции, сильные subject lines, экономия слов, сильные framing-паттерны (TLDR-first), культурно адаптированная прямота. В гайде это разбирается с конкретными примерами «было — стало»."
@@ -58,7 +59,9 @@ aggregate_rating:
 
 ## Что вы получаете
 
-PDF-гайд на 124 страницы, библиотеку executive scripts (board opening,
+PDF-гайд на 78 страниц + 11 приложений (Master Phrasebank на 500+ конструкций,
+Executive Glossary на 300 терминов, 15 шаблонов писем и memo, 30-дневный план,
+Country-by-Country Reference, Field Notes), библиотеку executive scripts (board opening,
 investor Q&A, layoff announcement, crisis statement, all-hands speech),
 разборы реальных публичных выступлений и earnings calls с тайм-кодами,
 шаблоны executive writing (memo, board update, OKR cascade).
