@@ -119,18 +119,27 @@ URL и отметь события: `payment.succeeded`, `payment.canceled`, `re
 
 ### 6. CORS
 
-Сайт хостится на GitHub Pages (`https://nilolafeo-bit.github.io`), а n8n —
-на elestio. Браузер делает cross-origin запрос. В ноде Webhook первого
-workflow (Create Payment) выстави **Response → Response Headers**:
+Сайт отдаётся с канонического домена `https://special-english.ru` (он же
+прописан в `_config.yml` как `url`). n8n — на elestio. Браузер делает
+cross-origin запрос. В ноде Webhook первого workflow (Create Payment)
+выстави **Response → Response Headers**:
 
 | Name                          | Value                                       |
 | ----------------------------- | ------------------------------------------- |
-| Access-Control-Allow-Origin   | `https://nilolafeo-bit.github.io`           |
+| Access-Control-Allow-Origin   | `https://special-english.ru`                |
 | Access-Control-Allow-Methods  | `POST, OPTIONS`                             |
 | Access-Control-Allow-Headers  | `Content-Type`                              |
 
+**Важно:** значение `Access-Control-Allow-Origin` должно точно совпадать
+с Origin страницы, откуда идёт fetch. Если у сайта поменяется домен
+(например, на `https://nilolafeo-bit.github.io` при откате с custom domain),
+этот заголовок нужно обновить — иначе браузер зарежет ответ с ошибкой
+`CORS error`, и фронт покажет «Не удалось создать платёж», хотя в самом
+n8n платёж реально создался.
+
 Также включи галочку **«Allow CORS preflight»** (если используешь n8n ≥ 1.20)
-или добавь второй Webhook на тот же путь с методом `OPTIONS`, отдающий 204.
+или добавь второй Webhook на тот же путь с методом `OPTIONS`, отдающий 204
+с теми же CORS-заголовками.
 
 ### 7. Тест
 
