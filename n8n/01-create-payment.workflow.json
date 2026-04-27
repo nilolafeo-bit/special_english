@@ -1,0 +1,105 @@
+{
+  "name": "Special English — Create YooKassa Payment",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "yukassa-create-payment",
+        "responseMode": "responseNode",
+        "options": {
+          "rawBody": false
+        }
+      },
+      "id": "webhook-create",
+      "name": "Webhook (from site)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 320],
+      "webhookId": "yukassa-create-payment"
+    },
+    {
+      "parameters": {
+        "functionCode": "// Карточный каталог: slug → цена + название.\n// Цены ДОЛЖНЫ совпадать с _data/guides.yml на сайте.\nconst CATALOG = {\n  'relocation-english':   { title: 'Английский для релокации',                price: 2990 },\n  'english-for-parents':  { title: 'Английский для родителей',                price: 1990 },\n  'medical-english':      { title: 'Английский для медиков',                  price: 4990 },\n  'it-interview-english': { title: 'English for Tech Interviews',             price: 2990 },\n  'ai-first-english':     { title: 'AI-first English for Tech Stars',         price: 2490 },\n  'legal-english':        { title: 'Legal English: Contracts & Compliance',   price: 5990 },\n  'logistics-english':    { title: 'Logistic English',                        price: 3490 },\n  'leadership-english':   { title: 'The language of Power — English for Leaders', price: 5490 }\n};\n\n// Куда возвращать после оплаты. Поменяй на боевой домен после переезда с GitHub Pages.\nconst RETURN_URL = 'https://nilolafeo-bit.github.io/special_english/thank-you/';\n\n// --- Валидация входа: жёсткие whitelist-проверки, чтобы пользователь\n//     не мог инжектнуть произвольные поля в JSON-тело запроса в ЮKassa. ---\nconst body = (items[0].json && items[0].json.body) || items[0].json || {};\nconst slug = (body.guide_slug || '').toString();\nconst email = (body.email || '').toString().trim();\nconst idempotenceKey = (body.idempotence_key || '').toString().trim();\nconst sourceUrl = (body.source_url || '').toString().trim();\n\n// 1) slug — только из каталога\nif (!slug || !Object.prototype.hasOwnProperty.call(CATALOG, slug)) {\n  throw new Error('Unknown guide_slug: ' + slug);\n}\n\n// 2) email — узкий безопасный набор символов, без кавычек/слэшей/скобок\nconst EMAIL_RE = /^[A-Za-z0-9._%+\\-]+@[A-Za-z0-9.\\-]+\\.[A-Za-z]{2,}$/;\nif (!email || email.length > 254 || !EMAIL_RE.test(email)) {\n  throw new Error('Invalid email');\n}\n\n// 3) idempotence_key — UUID-подобная строка\nconst IDEMP_RE = /^[A-Za-z0-9._\\-]{8,128}$/;\nif (!IDEMP_RE.test(idempotenceKey)) {\n  throw new Error('Invalid idempotence_key');\n}\n\n// 4) source_url — http(s), без кавычек/обратных слэшей, ограничение длины\nlet safeSourceUrl = '';\nif (sourceUrl) {\n  if (sourceUrl.length > 2048 || /[\"\\\\]/.test(sourceUrl) || !/^https?:\\/\\//.test(sourceUrl)) {\n    throw new Error('Invalid source_url');\n  }\n  safeSourceUrl = sourceUrl;\n}\n\nconst product = CATALOG[slug];\nconst priceValue = product.price.toFixed(2); // 'NNNN.00'\n\n// Собираем тело как объект, а в HTTP-ноде делаем JSON.stringify($json.payment_body).\n// Это гарантирует, что любые пользовательские значения экранируются как JSON-строки,\n// и не позволяет «вылезти» из строки и подменить, например, поле amount.\nconst paymentBody = {\n  amount: { value: priceValue, currency: 'RUB' },\n  capture: true,\n  confirmation: { type: 'redirect', return_url: RETURN_URL },\n  description: 'Гайд: ' + product.title,\n  metadata: {\n    guide_slug: slug,\n    email,\n    source_url: safeSourceUrl\n  },\n  receipt: {\n    customer: { email },\n    items: [\n      {\n        description: product.title,\n        quantity: '1.00',\n        amount: { value: priceValue, currency: 'RUB' },\n        vat_code: 1,\n        payment_subject: 'service',\n        payment_mode: 'full_prepayment'\n      }\n    ]\n  }\n};\n\nreturn [{\n  json: {\n    idempotence_key: idempotenceKey,\n    payment_body: paymentBody\n  }\n}];"
+      },
+      "id": "fn-validate",
+      "name": "Validate + Map slug → product",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [460, 320]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.yookassa.ru/v3/payments",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Idempotence-Key", "value": "={{ $json.idempotence_key }}" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.payment_body) }}",
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "http-yukassa",
+      "name": "YooKassa: POST /v3/payments",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [700, 320],
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "REPLACE_WITH_YOUR_BASIC_AUTH_CRED_ID",
+          "name": "YooKassa Basic"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"confirmation_url\": \"{{ $json.confirmation && $json.confirmation.confirmation_url || '' }}\",\n  \"payment_id\": \"{{ $json.id }}\",\n  \"status\": \"{{ $json.status }}\"\n}",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              { "name": "Access-Control-Allow-Origin", "value": "https://nilolafeo-bit.github.io" },
+              { "name": "Access-Control-Allow-Methods", "value": "POST, OPTIONS" },
+              { "name": "Access-Control-Allow-Headers", "value": "Content-Type" },
+              { "name": "Cache-Control", "value": "no-store" }
+            ]
+          }
+        }
+      },
+      "id": "respond",
+      "name": "Respond to Site",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [940, 320]
+    }
+  ],
+  "connections": {
+    "Webhook (from site)": {
+      "main": [[{ "node": "Validate + Map slug → product", "type": "main", "index": 0 }]]
+    },
+    "Validate + Map slug → product": {
+      "main": [[{ "node": "YooKassa: POST /v3/payments", "type": "main", "index": 0 }]]
+    },
+    "YooKassa: POST /v3/payments": {
+      "main": [[{ "node": "Respond to Site", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": []
+}

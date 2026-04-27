@@ -1,0 +1,133 @@
+{
+  "name": "Special English — YooKassa payment.succeeded → Email PDF",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "yukassa",
+        "responseMode": "onReceived",
+        "responseCode": 200,
+        "responseData": "{\"ok\":true}",
+        "options": {}
+      },
+      "id": "webhook-yukassa",
+      "name": "Webhook (from YooKassa)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [200, 320],
+      "webhookId": "yukassa"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "loose" },
+          "conditions": [
+            {
+              "id": "is-succeeded",
+              "leftValue": "={{ $json.body.event || $json.event }}",
+              "rightValue": "payment.succeeded",
+              "operator": { "type": "string", "operation": "equals" }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "if-succeeded",
+      "name": "Only payment.succeeded",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [420, 320]
+    },
+    {
+      "parameters": {
+        "functionCode": "// slug → fileId в Google Drive (PDF гайда) + красивое название.\n// Замени FILE_ID_* на реальные ID файлов в Google Drive.\nconst MAP = {\n  'relocation-english':   { fileId: 'FILE_ID_RELOCATION', title: 'Английский для релокации',                fileName: 'relocation-english.pdf' },\n  'english-for-parents':  { fileId: 'FILE_ID_PARENTS',    title: 'Английский для родителей',                fileName: 'english-for-parents.pdf' },\n  'medical-english':      { fileId: 'FILE_ID_MEDICAL',    title: 'Английский для медиков',                  fileName: 'medical-english.pdf' },\n  'it-interview-english': { fileId: 'FILE_ID_IT',         title: 'English for Tech Interviews',             fileName: 'it-interview-english.pdf' },\n  'ai-first-english':     { fileId: 'FILE_ID_AI',         title: 'AI-first English for Tech Stars',         fileName: 'ai-first-english.pdf' },\n  'legal-english':        { fileId: 'FILE_ID_LEGAL',      title: 'Legal English: Contracts & Compliance',   fileName: 'legal-english.pdf' },\n  'logistics-english':    { fileId: 'FILE_ID_LOGISTICS',  title: 'Logistic English',                        fileName: 'logistics-english.pdf' },\n  'leadership-english':   { fileId: 'FILE_ID_LEADERSHIP', title: 'The language of Power — English for Leaders', fileName: 'leadership-english.pdf' }\n};\n\nconst body = items[0].json.body || items[0].json;\nconst object = (body && body.object) || {};\nconst metadata = object.metadata || {};\nconst slug = (metadata.guide_slug || '').toString();\nconst email = (metadata.email || (object.receipt && object.receipt.customer && object.receipt.customer.email) || '').toString().trim();\nconst paymentId = (object.id || '').toString();\nconst amount = object.amount || {};\n\nif (!slug || !MAP[slug]) {\n  throw new Error('Unknown or missing guide_slug in metadata: ' + slug);\n}\nif (!email) {\n  throw new Error('Missing email in metadata');\n}\n\nconst product = MAP[slug];\n\nreturn [{\n  json: {\n    guide_slug: slug,\n    email,\n    payment_id: paymentId,\n    amount_value: amount.value,\n    amount_currency: amount.currency,\n    title: product.title,\n    fileId: product.fileId,\n    fileName: product.fileName\n  }\n}];"
+      },
+      "id": "fn-resolve",
+      "name": "Resolve slug → file + email",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [660, 240]
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": "={{ $json.fileId }}",
+        "options": {
+          "fileName": "={{ $json.fileName }}"
+        }
+      },
+      "id": "drive-download",
+      "name": "Google Drive: download PDF",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [900, 240],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "REPLACE_WITH_YOUR_GOOGLE_DRIVE_CRED_ID",
+          "name": "Google Drive (Special English)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Resolve slug → file + email').item.json.email }}",
+        "subject": "=Ваш гайд «{{ $('Resolve slug → file + email').item.json.title }}» — спасибо за покупку!",
+        "emailType": "html",
+        "message": "=<p>Здравствуйте!</p>\n<p>Спасибо за покупку гайда <strong>«{{ $('Resolve slug → file + email').item.json.title }}»</strong>. PDF — во вложении к этому письму.</p>\n<ul>\n  <li>Платёж: <code>{{ $('Resolve slug → file + email').item.json.payment_id }}</code></li>\n  <li>Сумма: {{ $('Resolve slug → file + email').item.json.amount_value }} {{ $('Resolve slug → file + email').item.json.amount_currency }}</li>\n</ul>\n<p>Электронный чек 54-ФЗ ЮKassa отправит на этот же email отдельным письмом.</p>\n<p>Если письмо или чек не пришли — напишите нам в ответ на это сообщение.</p>\n<p>—<br>Special English<br><a href=\"https://nilolafeo-bit.github.io/special_english/\">special-english</a></p>",
+        "options": {
+          "attachmentsUi": {
+            "attachmentsBinary": [
+              { "property": "data" }
+            ]
+          }
+        }
+      },
+      "id": "gmail-send",
+      "name": "Gmail: send PDF",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [1140, 240],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "REPLACE_WITH_YOUR_GMAIL_CRED_ID",
+          "name": "Gmail (Special English)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "Опционально:\n— Записать факт продажи в Google Sheets\n— Отправить себе уведомление в Telegram\n— Поставить cron, чтобы проверить, что чек 54-ФЗ зарегистрирован\nДобавь свои ноды после Gmail.",
+        "height": 160,
+        "width": 320
+      },
+      "id": "note-extras",
+      "name": "Notes: optional extras",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [1140, 460]
+    }
+  ],
+  "connections": {
+    "Webhook (from YooKassa)": {
+      "main": [[{ "node": "Only payment.succeeded", "type": "main", "index": 0 }]]
+    },
+    "Only payment.succeeded": {
+      "main": [
+        [{ "node": "Resolve slug → file + email", "type": "main", "index": 0 }],
+        []
+      ]
+    },
+    "Resolve slug → file + email": {
+      "main": [[{ "node": "Google Drive: download PDF", "type": "main", "index": 0 }]]
+    },
+    "Google Drive: download PDF": {
+      "main": [[{ "node": "Gmail: send PDF", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": []
+}

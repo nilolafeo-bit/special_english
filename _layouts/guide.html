@@ -29,7 +29,10 @@ layout: default
             <span class="guide__price-current">{{ page.price }}</span>
             {% if page.price_old %}<span class="guide__price-old">{{ page.price_old }}</span>{% endif %}
           </div>
-          <a class="btn btn--primary btn--lg" href="{{ page.payment_url }}" rel="nofollow noopener" data-buy="{{ page.slug }}">
+          <a class="btn btn--primary btn--lg" href="{{ page.payment_url }}" rel="nofollow noopener"
+             data-buy="{{ page.slug }}"
+             data-buy-title="{{ page.title | escape }}"
+             data-buy-price="{{ page.price | escape }}">
             Купить гайд
           </a>
           <p class="guide__buy-note">Мгновенная отправка PDF на email после оплаты</p>
@@ -120,7 +123,10 @@ layout: default
     <div class="container">
       <h2>Готовы взять гайд?</h2>
       <p>Один платёж — вечный доступ. Бесплатные обновления.</p>
-      <a class="btn btn--primary btn--lg" href="{{ page.payment_url }}" rel="nofollow noopener">
+      <a class="btn btn--primary btn--lg" href="{{ page.payment_url }}" rel="nofollow noopener"
+         data-buy="{{ page.slug }}"
+         data-buy-title="{{ page.title | escape }}"
+         data-buy-price="{{ page.price | escape }}">
         Купить за {{ page.price }}
       </a>
     </div>
