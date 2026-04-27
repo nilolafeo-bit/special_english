@@ -168,7 +168,11 @@
           return res.json();
         })
         .then(function (data) {
-          const url = data && (data.confirmation_url || (data.confirmation && data.confirmation.confirmation_url));
+          // n8n Respond node может вернуть либо чистый {confirmation_url},
+          // либо сырой ответ ЮKassa {confirmation: {confirmation_url}},
+          // либо массив [{...}] при режиме "All Items" — поддерживаем все три.
+          const item = Array.isArray(data) ? data[0] : data;
+          const url = item && (item.confirmation_url || (item.confirmation && item.confirmation.confirmation_url));
           if (!url) throw new Error('no confirmation_url');
           window.location.href = url;
         })
