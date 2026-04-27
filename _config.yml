@@ -11,8 +11,12 @@ author: "Special English"
 email: "aiinformatorbot@gmail.com"
 url: "https://special-english.ru"
 baseurl: ""
-lang: ru
+lang: ru-RU
+locale: ru_RU
 timezone: Europe/Moscow
+
+# Default OG/Twitter image — jekyll-seo-tag читает site.image для og:image и twitter:image
+image: "/assets/images/og-default.png"
 
 # ============================================================================
 # SOCIAL & VERIFICATIONS — заполни после регистрации
@@ -25,8 +29,8 @@ social:
 yandex_verification: ""
 google_site_verification: ""
 
-# Аналитика (вставить ID после подключения)
-yandex_metrika_id: ""
+# Аналитика
+yandex_metrika_id: "108786008"
 google_analytics_id: ""
 
 # ============================================================================
@@ -37,8 +41,8 @@ google_analytics_id: ""
 yukassa:
   create_payment_url: "https://ai-konfu-u70272.vm.elestio.app/webhook/yukassa-create-payment"
 
-# OpenGraph / Twitter — изображение по умолчанию (1200×630)
-og_image: "/assets/images/og-default.svg"
+# OpenGraph / Twitter — изображение по умолчанию (1200×630, PNG для совместимости с VK/Telegram/Facebook)
+og_image: "/assets/images/og-default.png"
 twitter:
   username: ""
   card: summary_large_image
@@ -60,20 +64,24 @@ defaults:
       type: posts
     values:
       layout: post
+      image: "/assets/images/og-default.png"
   - scope:
       path: ""
       type: guides
     values:
       layout: guide
+      image: "/assets/images/og-default.png"
   - scope:
       path: ""
       type: categories
     values:
       layout: category
+      image: "/assets/images/og-default.png"
   - scope:
       path: ""
     values:
       layout: page
+      image: "/assets/images/og-default.png"
 
 # ============================================================================
 # BUILD
@@ -116,3 +124,5 @@ exclude:
   - .sass-cache
   - .jekyll-cache
   - .gitignore
+  - n8n
+  - .agents
