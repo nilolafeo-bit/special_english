@@ -1,0 +1,53 @@
+{% comment %}
+  Buy modal — открывается при клике на любую кнопку с data-buy="<slug>".
+  Логика — в assets/js/main.js (initBuyModal). Адрес n8n-вебхука читаем
+  из site.yukassa.create_payment_url (см. _config.yml).
+{% endcomment %}
+<div class="buy-modal" id="buyModal" role="dialog" aria-modal="true" aria-labelledby="buyModalTitle" aria-hidden="true" data-create-payment-url="{{ site.yukassa.create_payment_url | default: '' }}">
+  <div class="buy-modal__backdrop" data-buy-close></div>
+  <div class="buy-modal__dialog" role="document">
+    <button type="button" class="buy-modal__close" aria-label="Закрыть" data-buy-close>×</button>
+
+    <div class="buy-modal__body" data-buy-step="form">
+      <h2 class="buy-modal__title" id="buyModalTitle">Покупка гайда</h2>
+      <p class="buy-modal__guide-title" data-buy-guide-title></p>
+      <p class="buy-modal__price" data-buy-price></p>
+
+      <form class="buy-modal__form" novalidate>
+        <label class="buy-modal__label" for="buyEmail">Email для отправки PDF</label>
+        <input
+          class="buy-modal__input"
+          type="email"
+          id="buyEmail"
+          name="email"
+          required
+          autocomplete="email"
+          placeholder="you@example.com"
+          aria-describedby="buyEmailHint">
+        <p class="buy-modal__hint" id="buyEmailHint">
+          На этот email придёт ссылка на скачивание PDF сразу после оплаты, и на него же ЮKassa отправит электронный чек 54-ФЗ.
+        </p>
+
+        <label class="buy-modal__checkbox">
+          <input type="checkbox" id="buyConsent" required>
+          <span>
+            Согласен с
+            <a href="{{ '/offer/' | relative_url }}" target="_blank" rel="noopener">офертой</a> и
+            <a href="{{ '/privacy/' | relative_url }}" target="_blank" rel="noopener">политикой&nbsp;конфиденциальности</a>.
+          </span>
+        </label>
+
+        <button type="submit" class="btn btn--primary btn--lg buy-modal__submit">
+          <span class="buy-modal__submit-label">Перейти к оплате</span>
+          <span class="buy-modal__spinner" aria-hidden="true"></span>
+        </button>
+
+        <p class="buy-modal__error" data-buy-error hidden></p>
+
+        <p class="buy-modal__legal">
+          Оплата проходит на стороне ЮKassa (АО «НКО ЮMoney»). Мы не получаем и не храним данные вашей карты.
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
