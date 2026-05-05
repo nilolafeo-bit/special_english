@@ -98,20 +98,20 @@ const map = {
 **Production URL** — это ссылка вида:
 
 ```
-https://ai-konfu-u70272.vm.elestio.app/webhook/yukassa-create-payment
+https://hooks.neirolanding.ru/webhook/yukassa-create-payment
 ```
 
 Этот URL вставь в `_config.yml` сайта:
 
 ```yaml
 yukassa:
-  create_payment_url: "https://ai-konfu-u70272.vm.elestio.app/webhook/yukassa-create-payment"
+  create_payment_url: "https://hooks.neirolanding.ru/webhook/yukassa-create-payment"
 ```
 
 Production URL вебхука второго workflow (это твой существующий URL):
 
 ```
-https://ai-konfu-u70272.vm.elestio.app/webhook/yukassa
+https://hooks.neirolanding.ru/webhook/yukassa
 ```
 
 Зайди в личный кабинет ЮKassa → **Интеграция → HTTP-уведомления**, добавь этот
@@ -120,7 +120,7 @@ URL и отметь события: `payment.succeeded`, `payment.canceled`, `re
 ### 6. CORS
 
 Сайт отдаётся с канонического домена `https://special-english.ru` (он же
-прописан в `_config.yml` как `url`). n8n — на elestio. Браузер делает
+прописан в `_config.yml` как `url`). n8n — на отдельном хосте `hooks.neirolanding.ru`. Браузер делает
 cross-origin запрос. В ноде Webhook первого workflow (Create Payment)
 выстави **Response → Response Headers**:
 
