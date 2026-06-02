@@ -382,7 +382,7 @@ h4 { font-size: var(--text-lg); font-weight: 600; }
 .prose hr { border: 0; border-top: 1px solid var(--color-border); margin: var(--space-7) 0; }
 
 /* ---------- Page header ---------- */
-.page-content { padding: var(--space-6) 0 var(--space-9); }
+.page-content { padding-top: var(--space-6); padding-bottom: var(--space-9); }
 .page-content__header { max-width: var(--container-narrow); margin: 0 auto var(--space-7); text-align: center; }
 .page-content__subtitle { color: var(--color-text-muted); font-size: var(--text-lg); margin-top: var(--space-3); }
 
@@ -964,7 +964,7 @@ h4 { font-size: var(--text-lg); font-weight: 600; }
 }
 
 /* ---------- Post page ---------- */
-.post { padding: var(--space-6) 0 var(--space-9); }
+.post { padding-top: var(--space-6); padding-bottom: var(--space-9); }
 .post__header { max-width: var(--container-narrow); margin: 0 auto var(--space-7); }
 .post__category { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.06em; }
 .post__category a { color: var(--color-accent); font-weight: 600; }
@@ -998,7 +998,7 @@ h4 { font-size: var(--text-lg); font-weight: 600; }
 .post__faq { max-width: var(--container-narrow); margin: var(--space-7) auto 0; }
 
 /* ---------- Category page ---------- */
-.category__hero { padding: var(--space-7) 0 var(--space-6); text-align: center; }
+.category__hero { padding-top: var(--space-7); padding-bottom: var(--space-6); text-align: center; }
 .category__intro { padding: var(--space-5) 0 var(--space-7); }
 .category__guides, .category__posts, .category__faq { padding: var(--space-7) 0; }
 
