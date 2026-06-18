@@ -1,0 +1,319 @@
+// ============================================================
+// AI Trainer Widget — Special English
+// ============================================================
+
+.trainer-section {
+  padding: 4rem 0;
+  border-top: 1px solid var(--color-border, #e5e7eb);
+  
+  &__header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  &__subtitle {
+    color: var(--color-text-secondary, #6b7280);
+  }
+}
+
+.trainer {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--color-surface, #fff);
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  
+  // ---- Setup screen ----
+  &__setup {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  &__setup-label {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  &__scenarios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+  
+  &__scenario-btn {
+    padding: 0.625rem 1.25rem;
+    border: 2px solid var(--color-primary, #0A1729);
+    border-radius: 100px;
+    background: transparent;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    
+    &:hover {
+      background: var(--color-primary, #0A1729);
+      color: #fff;
+    }
+  }
+  
+  // ---- Chat header ----
+  &__chat-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1rem;
+    background: var(--color-primary, #0A1729);
+    color: #fff;
+  }
+  
+  &__persona {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    
+    &-emoji {
+      font-size: 1.5rem;
+    }
+    
+    strong {
+      display: block;
+      font-size: 0.9375rem;
+      line-height: 1.2;
+    }
+    
+    small {
+      font-size: 0.75rem;
+      opacity: 0.75;
+    }
+  }
+  
+  &__progress {
+    font-size: 0.75rem;
+    text-align: right;
+    opacity: 0.85;
+    white-space: nowrap;
+  }
+  
+  &__progress-bar {
+    width: 80px;
+    height: 4px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 2px;
+    margin-top: 4px;
+    margin-left: auto;
+  }
+  
+  &__progress-fill {
+    height: 100%;
+    background: #4ade80;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+    width: 0%;
+  }
+  
+  &__reset-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    
+    &:hover { background: rgba(255,255,255,0.15); }
+  }
+  
+  // ---- Messages ----
+  &__messages {
+    height: 360px;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    scroll-behavior: smooth;
+  }
+  
+  &__message {
+    max-width: 85%;
+    
+    p {
+      margin: 0;
+      padding: 0.75rem 1rem;
+      border-radius: 16px;
+      line-height: 1.5;
+      font-size: 0.9375rem;
+    }
+    
+    &--ai {
+      align-self: flex-start;
+      
+      p {
+        background: var(--color-surface-alt, #f3f4f6);
+        color: var(--color-text, #111827);
+        border-bottom-left-radius: 4px;
+      }
+    }
+    
+    &--user {
+      align-self: flex-end;
+      
+      p {
+        background: var(--color-primary, #0A1729);
+        color: #fff;
+        border-bottom-right-radius: 4px;
+      }
+    }
+    
+    &--system {
+      align-self: center;
+      
+      p {
+        background: #fef9c3;
+        color: #713f12;
+        font-size: 0.8125rem;
+        border-radius: 8px;
+        text-align: center;
+      }
+    }
+  }
+  
+  // ---- Feedback ----
+  &__feedback-area {
+    border-top: 1px solid var(--color-border, #e5e7eb);
+    padding: 1rem;
+    background: #f8fafc;
+  }
+  
+  &__feedback-block {
+    background: #fff;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 0.875rem;
+    
+    p { margin: 0 0 0.5rem; line-height: 1.5; }
+    p:last-child { margin-bottom: 0; }
+  }
+  
+  &__feedback-title {
+    font-weight: 700;
+    font-size: 0.9375rem;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  &__feedback-good   { color: #15803d; }
+  &__feedback-improve { color: #b45309; }
+  &__feedback-native  { color: #1d4ed8; }
+  
+  // ---- Input ----
+  &__input-area {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--color-border, #e5e7eb);
+    background: #fff;
+  }
+  
+  &__input {
+    flex: 1;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: 10px;
+    padding: 0.625rem 0.875rem;
+    font-size: 0.9375rem;
+    font-family: inherit;
+    resize: none;
+    line-height: 1.5;
+    
+    &:focus {
+      outline: none;
+      border-color: var(--color-primary, #0A1729);
+    }
+    
+    &::placeholder { color: #9ca3af; }
+  }
+  
+  &__send-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--color-primary, #0A1729);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: opacity 0.15s;
+    
+    &:hover { opacity: 0.85; }
+    &:disabled { opacity: 0.4; cursor: not-allowed; }
+    
+    &--loading {
+      animation: pulse 1s infinite;
+    }
+  }
+  
+  // ---- CTA ----
+  &__cta {
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #f0f9ff 0%, #eff6ff 100%);
+    border-top: 1px solid var(--color-border, #e5e7eb);
+  }
+  
+  &__cta-emoji { font-size: 2.5rem; margin-bottom: 0.5rem; }
+  
+  &__cta-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  
+  &__cta-text {
+    color: var(--color-text-secondary, #6b7280);
+    margin-bottom: 1.5rem;
+    font-size: 0.9375rem;
+  }
+  
+  &__cta-btn {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+  }
+  
+  &__cta-restart {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--color-text-secondary, #6b7280);
+    font-size: 0.875rem;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0.25rem;
+    
+    &:hover { color: var(--color-primary, #0A1729); }
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
