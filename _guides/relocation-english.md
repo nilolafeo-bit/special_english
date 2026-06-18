@@ -5,6 +5,13 @@ subtitle: "Что говорить в первые 90 дней за границ
 short_description: "Скрипты, диалоги и e-mail-шаблоны для банка, аренды, врача, школы и миграционной службы. Для семей и одиночек, переезжающих в Европу, UK, Кипр и ОАЭ."
 description: "Платный PDF-гайд для русскоязычных релокантов: банк, аренда, ВНЖ, врач, школа. 126 страниц скриптов и шаблонов. Уровень A2–B1."
 category: relocation
+trainer_scenarios:
+  - id: relocation-landlord
+    label: "🏠 Снять квартиру"
+  - id: relocation-bank
+    label: "🏦 Открыть счёт"
+  - id: relocation-school
+    label: "🎒 Записать ребёнка в школу"
 category_title: "Английский для релокации"
 price: "2 990 ₽"
 price_old: "4 490 ₽"
