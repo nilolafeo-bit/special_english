@@ -5,6 +5,11 @@ subtitle: "Практическое руководство для руковод
 short_description: "Для CEO, CFO, COO, founders и board members уровня B2–C1, выходящих на международный уровень. 78 страниц + 11 приложений, Master Phrasebank на 500+ конструкций, 30-дневный план."
 description: "PDF-гайд для C-level: executive voice, board briefings, investor relations, negotiation, storytelling, cross-cultural communication. 78 страниц + 11 приложений. Уровень B2–C1."
 category: leadership
+trainer_scenarios:
+  - id: leadership-board
+    label: "📊 Совет директоров"
+  - id: leadership-review
+    label: "👤 Разговор с подчинённым"
 category_title: "Английский для руководителей"
 price: "5 490 ₽"
 price_old: "7 490 ₽"
