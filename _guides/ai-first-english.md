@@ -5,6 +5,9 @@ subtitle: "Персональный преподаватель в кармане
 short_description: "Практическая система: довести рабочий английский до C1 за 60–90 дней с помощью Claude и других AI-инструментов. 100+ промптов, 6 готовых AI-персон, Daily Loop по 20–30 минут."
 description: "PDF-гайд для разработчиков, QA, DevOps, PM: как довести английский до C1 за 60–90 дней с помощью AI. 87 страниц, 100+ промптов, 90-дневный план."
 category: it
+trainer_scenarios:
+  - id: it-standup
+    label: "⚡ Daily Standup (Scrum)"
 category_title: "Английский для IT"
 price: "2 490 ₽"
 price_old: "3 490 ₽"
