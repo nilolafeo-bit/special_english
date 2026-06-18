@@ -1,0 +1,99 @@
+{% comment %}
+  Usage in guide layout:
+  {% include trainer-widget.html guide=page %}
+  
+  Requires front matter in guide .md:
+  trainer_scenarios:
+    - id: it-behavioral
+      label: "🎤 Behavioral Interview"
+    - id: it-system-design  
+      label: "🏗 System Design"
+{% endcomment %}
+
+{% if page.trainer_scenarios %}
+<section class="trainer-section" id="trainer">
+  <div class="trainer-section__header">
+    <h2 class="trainer-section__title">Попробуй бесплатно</h2>
+    <p class="trainer-section__subtitle">
+      Потренируй реальный диалог с AI. 10 реплик — бесплатно.
+    </p>
+  </div>
+
+  <div class="trainer" 
+       data-webhook="{{ site.trainer_webhook_url }}"
+       data-guide="{{ page.slug }}">
+    
+    <!-- Scenario selector -->
+    <div class="trainer__setup" id="trainer-setup">
+      <p class="trainer__setup-label">Выбери сценарий:</p>
+      <div class="trainer__scenarios">
+        {% for scenario in page.trainer_scenarios %}
+        <button 
+          class="trainer__scenario-btn" 
+          data-scenario-id="{{ scenario.id }}"
+          data-scenario-label="{{ scenario.label }}">
+          {{ scenario.label }}
+        </button>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Chat interface -->
+    <div class="trainer__chat" id="trainer-chat" hidden>
+      
+      <div class="trainer__chat-header">
+        <div class="trainer__persona" id="trainer-persona"></div>
+        <div class="trainer__progress">
+          <span id="trainer-turn-count">0</span>/10 реплик
+          <div class="trainer__progress-bar">
+            <div class="trainer__progress-fill" id="trainer-progress-fill"></div>
+          </div>
+        </div>
+        <button class="trainer__reset-btn" id="trainer-reset" title="Начать заново">↺</button>
+      </div>
+
+      <div class="trainer__messages" id="trainer-messages" role="log" aria-live="polite">
+        <!-- Messages injected by JS -->
+      </div>
+
+      <div class="trainer__feedback-area" id="trainer-feedback" hidden>
+        <!-- Feedback blocks injected by JS -->
+      </div>
+
+      <div class="trainer__input-area" id="trainer-input-area">
+        <textarea 
+          class="trainer__input" 
+          id="trainer-input"
+          placeholder="Пиши по-английски..."
+          rows="2"
+          maxlength="500"
+          aria-label="Твоя реплика"></textarea>
+        <button class="trainer__send-btn" id="trainer-send" aria-label="Отправить">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Session end CTA -->
+    <div class="trainer__cta" id="trainer-cta" hidden>
+      <div class="trainer__cta-inner">
+        <p class="trainer__cta-emoji">🎉</p>
+        <h3 class="trainer__cta-title">Сессия завершена</h3>
+        <p class="trainer__cta-text" id="trainer-cta-text"></p>
+        <a class="trainer__cta-btn btn btn--primary" id="trainer-cta-link" href="#">
+          Получить полный гайд
+        </a>
+        <button class="trainer__cta-restart" id="trainer-cta-restart">
+          Попробовать другой сценарий
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="{{ '/assets/js/trainer.js' | relative_url }}" defer></script>
+{% endif %}
