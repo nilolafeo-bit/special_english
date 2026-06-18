@@ -5,6 +5,9 @@ subtitle: "Полный курс с разбором реальных задан
 short_description: "Для врачей и медсестёр, нацеленных на работу в UK, Австралии и Канаде. 10 глав, разбор всех 4 модулей OET, протоколы Calgary–Cambridge и SPIKES, 90-дневный план."
 description: "PDF-гайд для врачей и медсестёр СНГ: подготовка к OET, протоколы Calgary–Cambridge и SPIKES, регуляторные пути GMC/NMC/AHPRA. 118 страниц. Уровень B1–B2."
 category: medical
+trainer_scenarios:
+  - id: medical-gp
+    label: "🩺 Приём у врача (OET)"
 category_title: "Английский для медиков"
 price: "4 990 ₽"
 price_old: "6 990 ₽"
