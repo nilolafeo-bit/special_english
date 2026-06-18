@@ -5,6 +5,9 @@ subtitle: "Полный гайд по интервью в международн
 short_description: "Для Middle и Senior разработчиков из СНГ, идущих в Google, Meta, Stripe, Booking, Revolut, Spotify. Coding narration, system design, behavioral, salary negotiation, follow-ups."
 description: "PDF-гайд для Middle/Senior разработчиков: подготовка к интервью в Google, Meta, Stripe, Booking, Revolut, Spotify. 81 страница, 50 reference-ответов по STAR."
 category: it
+trainer_scenarios:
+  - id: it-behavioral
+    label: "🎤 Behavioral Interview"
 category_title: "Английский для IT"
 price: "2 990 ₽"
 price_old: "4 490 ₽"
