@@ -14,7 +14,7 @@ baseurl: ""
 lang: ru-RU
 locale: ru_RU
 timezone: Europe/Moscow
-trainer_webhook_url: "https://hooks.neirolanding.ru/webhook/trainer/chat"
+trainer_webhook_url: "https://hooks.neirolanding.ru/webhook/a1b2c3d4-trainer/chat"
 # Default OG/Twitter image — jekyll-seo-tag читает site.image для og:image и twitter:image
 image: "/assets/images/og-default.png"
 
