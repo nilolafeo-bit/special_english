@@ -158,6 +158,7 @@ h4 { font-size: var(--text-lg); font-weight: 600; }
   backdrop-filter: saturate(140%) blur(8px);
   -webkit-backdrop-filter: saturate(140%) blur(8px);
   border-bottom: 1px solid var(--color-primary);
+   padding-top: env(safe-area-inset-top, 0px);
 }
 .site-header__inner {
   display: flex;
@@ -252,7 +253,7 @@ h4 { font-size: var(--text-lg); font-weight: 600; }
   .site-header__toggle { display: flex; }
   .site-header__nav {
     position: fixed;
-    inset: 72px 0 auto 0;
+    inset: calc(72px + env(safe-area-inset-top, 0px)) 0 auto 0;
     background: var(--color-surface);
     border-bottom: 1px solid var(--color-border);
     padding: var(--space-5);
